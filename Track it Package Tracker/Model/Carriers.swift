@@ -10,6 +10,7 @@ import Foundation
 struct Carrier: Decodable
 {
     let name: String
+    let carrierCode: String
 
     //let category: Category
 

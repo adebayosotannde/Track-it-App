@@ -127,7 +127,7 @@ extension SelectCarrierViewController: UITableViewDataSource
           }
         
         
-        cell.carrierName.text = carrier.name
+        cell.carrierName.text = carrier.name // used because indivuald carrier is generated for each row since filtering is on.
         cell.carrierImage.image = UIImage(named: carrier.name.lowercased())
 //
 //        cell.carrierName.text = carriers[indexPath.row].name
