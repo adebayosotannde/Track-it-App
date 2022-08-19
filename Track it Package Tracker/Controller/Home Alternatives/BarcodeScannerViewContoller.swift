@@ -14,7 +14,7 @@ class BarcodeScannerViewContoller: UIViewController
 {
     //IBOUTLETS and Variable
     static var storyBoardID = "BarcodeScannerViewContoller"
-    
+    //
     @IBOutlet weak var pickImageButton: UIButton!
     @IBOutlet weak var warningTextLabel: UILabel!
     @IBOutlet weak var BackButton: UIButton!
