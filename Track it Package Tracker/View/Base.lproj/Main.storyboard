@@ -401,6 +401,11 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="buttonTracking:" destination="xhs-3M-LFs" eventType="editingChanged" id="9FX-86-til"/>
+                                                    <action selector="buttonTracking:" destination="xhs-3M-LFs" eventType="editingDidEnd" id="V9J-hE-fAc"/>
+                                                    <action selector="buttonTracking:" destination="xhs-3M-LFs" eventType="editingDidBegin" id="gS8-uA-bI9"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -442,6 +447,9 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                <connections>
+                                                    <action selector="buttonTracking:" destination="xhs-3M-LFs" eventType="touchDown" id="fde-hS-M1K"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -533,6 +541,7 @@
                         <outlet property="packageDescriptionLabel" destination="2QF-0x-PUA" id="5SO-fu-c7C"/>
                         <outlet property="startTrackingButton" destination="hdh-hI-16Y" id="xpr-AZ-YqH"/>
                         <outlet property="trackingNumberLabel" destination="Tc2-vC-VcA" id="V6n-Wk-1bi"/>
+                        <segue destination="0P9-5O-5cM" kind="show" id="1hd-nV-AZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1J-u2-Ghk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3910,13 +3919,13 @@ Cg
         <!--Select a Carrier-->
         <scene sceneID="ypn-uQ-jil">
             <objects>
-                <viewController storyboardIdentifier="SelectCarrierViewController" id="0P9-5O-5cM" customClass="SelectCarrierViewController" customModule="Track_It" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectCarrierViewController" id="0P9-5O-5cM" customClass="SelectCarrierViewController" customModule="Track_it_Package_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wzB-cK-KAl">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T4q-c2-JKQ">
-                                <rect key="frame" x="0.0" y="44" width="428" height="882"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="838"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0P9-5O-5cM" id="n3H-FR-25c"/>
@@ -3960,7 +3969,7 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xpW-tQ-suJ"/>
+        <segue reference="944-v4-ni7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Alibaba" width="1200" height="729"/>

@@ -16,6 +16,7 @@ extension AddTrakingNumberViewController
         registerNotificationCenter()
         barcodeButton.blink()
         self.carrierNameLabel.delegate = self
+        disableButton()
     }
 
     override func viewDidAppear(_ animated: Bool)
@@ -28,11 +29,36 @@ extension AddTrakingNumberViewController
             launchBarcodeViewController = false
         }
     }
+    
+    
+    func enableButton()
+    {
+        startTrackingButton.isEnabled = true
+        startTrackingButton.alpha = 1.0
+    }
+    
+    func disableButton()
+    {
+        startTrackingButton.isEnabled = false
+        startTrackingButton.alpha = 0.5
+    }
 }
 
 class AddTrakingNumberViewController: UIViewController
 {
 
+    @IBAction func buttonTracking(_ sender: Any)
+    {
+        
+       
+        textFieldCheck()
+    }
+    //Package Details
+    var carrierCode: String = ""
+    var trackingNumber: String = ""
+    var packageDescription: String = ""
+    
+    
     var launchBarcodeViewController = false
 
 
@@ -43,11 +69,14 @@ class AddTrakingNumberViewController: UIViewController
     //UITextFileds
     @IBOutlet weak var barcodeButton: UIButton!
     @IBOutlet weak var carrierNameLabel: UITextField!
+    
     @IBOutlet weak var packageDescriptionLabel: UITextField!
     @IBOutlet weak var trackingNumberLabel: UITextField!
 
     @IBAction func startTrackingButtonPressed(_ sender: Any)
     {
+        //TODO:
+       
     }
     @IBAction func barcodeButtonPressed(_ sender: UIButton)
     {
@@ -66,7 +95,7 @@ extension AddTrakingNumberViewController
 
     func postBarcodeNotification(code: String)
     {
-        print("Im Here2")
+      
         var info = [String: String]()
         info[code.description] = code.description //post the notification with the key.
         NotificationCenter.default.post(name: Notification.Name(rawValue: StringLiteral.notificationKey), object: nil, userInfo: info)
@@ -75,13 +104,21 @@ extension AddTrakingNumberViewController
     @objc func doWhenNotified(_ notiofication: NSNotification)
     {
 
-        print("Im Here")
+     
       if let dict = notiofication.userInfo as NSDictionary?
       {
           if let carrier = dict[StringLiteral.postCarrierName] as? String
         {
            carrierNameLabel.text = carrier
-            carrierImage.image = UIImage(named: carrier.lowercased())
+              textFieldCheck()
+            
+        }
+          if let carrierCode = dict[StringLiteral.postCarrierCode] as? String
+        {
+           
+              carrierImage.image = UIImage(named: carrierCode.lowercased())
+              //Update the carrier Code Variable
+              self.carrierCode = carrierCode
         }
           if let barcode = dict[StringLiteral.barcodeScannedNotification] as? String
         {
@@ -93,6 +130,7 @@ extension AddTrakingNumberViewController
 
 extension AddTrakingNumberViewController: UITextFieldDelegate
 {
+    
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
@@ -100,7 +138,7 @@ extension AddTrakingNumberViewController: UITextFieldDelegate
 //        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SelectCarrierViewController") as! SelectCarrierViewController
 //        navigationController?.pushViewController(newViewController, animated: true)
 //           return false
-        print("You touched me!")
+
 //        performSegue(withIdentifier: "mySegueID", sender: nil)
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -110,6 +148,21 @@ extension AddTrakingNumberViewController: UITextFieldDelegate
       
 
        }
+    
+    func textFieldCheck()
+    {
+        if (trackingNumberLabel.text!.isEmpty ) ||  (carrierNameLabel.text!.isEmpty)
+                {
+                    disableButton()
+                }
+                else
+                {
+                    enableButton()
+                }
+        
+        
+                
+    }
 }
 
 

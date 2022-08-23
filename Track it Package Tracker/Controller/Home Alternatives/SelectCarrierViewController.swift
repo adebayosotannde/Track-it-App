@@ -128,7 +128,7 @@ extension SelectCarrierViewController: UITableViewDataSource
         
         
         cell.carrierName.text = carrier.name // used because indivuald carrier is generated for each row since filtering is on.
-        cell.carrierImage.image = UIImage(named: carrier.name.lowercased())
+        cell.carrierImage.image = UIImage(named: carrier.carrierCode.lowercased())
 //
 //        cell.carrierName.text = carriers[indexPath.row].name
 //        cell.carrierImage.image = UIImage(named: carriers[indexPath.row].name.lowercased())
@@ -159,6 +159,7 @@ extension SelectCarrierViewController: UITableViewDelegate
           }
         
         postBarcodeNotification(carrierName: carrier.name)
+        postBarcodeNotification(carrierCode: carrier.carrierCode)
         tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.popViewController(animated: true)
       
@@ -177,6 +178,16 @@ extension SelectCarrierViewController
         info[StringLiteral.postCarrierName] = carrierName.description
         NotificationCenter.default.post(name: Notification.Name(rawValue: StringLiteral.notificationKey), object: nil, userInfo: info)
         AppUtility.toggleHapticSuccess() //Haptic Indicating Success
+        
+    }
+    
+    func postBarcodeNotification(carrierCode: String)
+    {
+        var info = [String: String]()
+        info[StringLiteral.postCarrierCode] = carrierCode.description
+        NotificationCenter.default.post(name: Notification.Name(rawValue: StringLiteral.notificationKey), object: nil, userInfo: info)
+       
+        
         
     }
 }
