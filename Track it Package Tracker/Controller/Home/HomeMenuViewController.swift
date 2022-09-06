@@ -13,36 +13,24 @@ extension HomeMenuViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-     
-       
-        
-      
+
         menuTableView.backgroundColor = .clear
-      
-       
-        
-      
-        
-        
-        let menuNib = UINib(nibName: SideMenuTableViewCell.classIdentifier,bundle: nil)
-        self.menuTableView.register(menuNib,forCellReuseIdentifier: SideMenuTableViewCell.cellIdentifier)
-        
-        
-        //RegisterTableViewCells
-        let textFieldCell = UINib(nibName: PackageTableViewCell.classIdentifier,bundle: nil)
-        self.packagesTableView.register(textFieldCell,forCellReuseIdentifier: PackageTableViewCell.cellIdentifier)
-        
-        
-        
+        registerTableViewCells()
         home = self.containerView.transform
-    
+        updateUI()
+    registerNotificationCenter()
     }
     
 }
 
-
+//MARK: - Main Class
 class HomeMenuViewController: UIViewController
 {
+    
+    var packages = [PackageObject]() //Pacakge Object Array
+    
+    
+    
     @IBOutlet var containerView: UIView!
     @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
     @IBOutlet var menuTableView: UITableView!
@@ -76,10 +64,9 @@ class HomeMenuViewController: UIViewController
     
     @IBAction func showMenu(_ sender: UISwipeGestureRecognizer) {
         
-        print("menu interaction")
+     
         
-        print(swipeGesture.direction)
-        print(menu)
+       
         if menu == false && swipeGesture.direction == .right
         {
         showMenu()
@@ -100,6 +87,7 @@ class HomeMenuViewController: UIViewController
     }
 }
 
+//MARK: - Table View Controller Functions
 extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -109,7 +97,7 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
         case menuTableView:
             return options.count
         case packagesTableView:
-            return options.count
+            return packages.count
         default:
             fatalError()
         }
@@ -127,6 +115,19 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
             return cell
         case packagesTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: PackageTableViewCell.cellIdentifier, for: indexPath) as! PackageTableViewCell
+            //A Package object is decleared.
+            
+            let tempPackage: PackageObject = packages[indexPath.row]
+            cell.carrierNameAndTracking.text = tempPackage.carrierName! + ": " + tempPackage.trackingNumber!
+            cell.packageDescription.text = tempPackage.descriptionOfPackage
+            cell.logoImage.image = UIImage(named: tempPackage.packageCarrierCode!)
+            cell.packageCurrentDescription.text = tempPackage.currentDescription! //Good
+            
+            
+            cell.circleIndicator.tintColor =  getColorFromString(nameAsString: tempPackage.circleIndicatorColor!)
+            
+            
+            
             cell.selectionStyle = .none
             return cell
         default:
@@ -155,15 +156,17 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
     
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
         switch tableView
         {
         case menuTableView:
-            print("Menu Table View Tapped")
+            print("Menu tableview tapped")
         case packagesTableView:
-            print("Package Table View Tapped")
+            
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let packageView = storyBoard.instantiateViewController(withIdentifier: "PackageViewController") as! PackageViewController
@@ -174,15 +177,25 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
         }
         
         
+        
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    {
+      
+        
+        if editingStyle == .delete
+        {
+            CoreDataManager.sharedManager.delete(person: packages[indexPath.row])
+        }
+        
+       
     }
    
-    
-    
-    
 }
 
 
-
+//MARK: - Side Menu Functions
 extension HomeMenuViewController
 {
     
@@ -227,5 +240,37 @@ extension HomeMenuViewController
         
     }
     
+    
+}
+
+//MARK: - Notification Canter
+extension HomeMenuViewController
+{
+    func registerNotificationCenter()
+    {
+    //Obsereves the Notification
+    NotificationCenter.default.addObserver(self, selector: #selector(doWhenNotified(_:)), name: Notification.Name(StringLiteral.notificationKey), object: nil)
+    }
+    
+    func postBarcodeNotification(code: String)
+    {
+        var info = [String: String]()
+        info[code.description] = code.description //post the notification with the key.
+        NotificationCenter.default.post(name: Notification.Name(rawValue: StringLiteral.notificationKey), object: nil, userInfo: info)
+    }
+    
+    @objc func doWhenNotified(_ notiofication: NSNotification)
+    {
+        if let dict = notiofication.userInfo as NSDictionary?
+        {
+            if (dict[StringLiteral.updateHomeViewData] as? String) != nil
+            {
+                updateUI()
+            }
+    
+        
+    
+        }
+    }
     
 }

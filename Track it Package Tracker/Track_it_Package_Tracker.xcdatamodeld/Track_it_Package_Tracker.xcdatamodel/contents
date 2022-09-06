@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="PackageObject" representedClassName="PackageObject" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="carrierName" optional="YES" attributeType="String"/>
+        <attribute name="circleIndicatorColor" optional="YES" attributeType="String"/>
+        <attribute name="currentDescription" optional="YES" attributeType="String"/>
+        <attribute name="delivered" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="descriptionOfPackage" optional="YES" attributeType="String"/>
+        <attribute name="isValidTrackingNumber" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="packageCarrierCode" optional="YES" attributeType="String"/>
+        <attribute name="trackingNumber" optional="YES" attributeType="String" defaultValueString="Invalid Tracking Number"/>
+    </entity>
+    <elements>
+        <element name="PackageObject" positionX="-63" positionY="-18" width="128" height="149"/>
+    </elements>
 </model>

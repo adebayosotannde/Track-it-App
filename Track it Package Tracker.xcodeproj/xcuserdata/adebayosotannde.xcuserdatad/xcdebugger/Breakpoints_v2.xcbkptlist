@@ -3,4 +3,114 @@
    uuid = "90B43410-D39C-4910-B844-75D93BE1949E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FF4EFA7-9C7A-4E78-8060-52F1346C870A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Track it Package Tracker/Controller/Home Alternatives/AddTrakingNumberViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "AddTrakingNumberViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5FF4EFA7-9C7A-4E78-8060-52F1346C870A - d7485ce2193eb792"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Track_it_Package_Tracker.AddTrakingNumberViewController.trackingNumber.getter : Swift.String"
+                  moduleName = "Track it Package Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adebayosotannde/Desktop/Track%20it%20Package%20Tracker/Track%20it%20Package%20Tracker/Controller/Home%20Alternatives/AddTrakingNumberViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "5FF4EFA7-9C7A-4E78-8060-52F1346C870A - 8caad2d4e056479e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Track_it_Package_Tracker.AddTrakingNumberViewController.trackingNumber.setter : Swift.String"
+                  moduleName = "Track it Package Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adebayosotannde/Desktop/Track%20it%20Package%20Tracker/Track%20it%20Package%20Tracker/Controller/Home%20Alternatives/AddTrakingNumberViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "5FF4EFA7-9C7A-4E78-8060-52F1346C870A - fe2f6bcf530e63ed"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Track_it_Package_Tracker.AddTrakingNumberViewController.trackingNumber.modify : Swift.String"
+                  moduleName = "Track it Package Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adebayosotannde/Desktop/Track%20it%20Package%20Tracker/Track%20it%20Package%20Tracker/Controller/Home%20Alternatives/AddTrakingNumberViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5FF4EFA7-9C7A-4E78-8060-52F1346C870A - b5845369b6ffc523"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Track_it_Package_Tracker.AddTrakingNumberViewController.trackingNumber.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Track it Package Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adebayosotannde/Desktop/Track%20it%20Package%20Tracker/Track%20it%20Package%20Tracker/Controller/Home%20Alternatives/AddTrakingNumberViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "5FF4EFA7-9C7A-4E78-8060-52F1346C870A - b817cffb17e48d2a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Track_it_Package_Tracker.AddTrakingNumberViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Track_it_Package_Tracker.AddTrakingNumberViewController"
+                  moduleName = "Track it Package Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adebayosotannde/Desktop/Track%20it%20Package%20Tracker/Track%20it%20Package%20Tracker/Controller/Home%20Alternatives/AddTrakingNumberViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "5FF4EFA7-9C7A-4E78-8060-52F1346C870A - 926fe537bc8014cd"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Track_it_Package_Tracker.AddTrakingNumberViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Track_it_Package_Tracker.AddTrakingNumberViewController&gt;"
+                  moduleName = "Track it Package Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adebayosotannde/Desktop/Track%20it%20Package%20Tracker/Track%20it%20Package%20Tracker/Controller/Home%20Alternatives/AddTrakingNumberViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

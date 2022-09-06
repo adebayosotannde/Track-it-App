@@ -3,7 +3,6 @@
 { "name": "APG", "carrierCode": "apg" },
 { "name": "Aramex", "carrierCode": "aramex" },
 { "name": "Asendia US", "carrierCode": "asendia_us" },
-{ "name": "Australia Post", "carrierCode": "australia_post" },
 { "name": "Axlehire", "carrierCode": "axlehire" },
 { "name": "BorderGuru", "carrierCode": "borderguru" },
 { "name": "Boxberry", "carrierCode": "boxberry" },
@@ -33,12 +32,6 @@
 { "name": "Gophr", "carrierCode": "gophr" },
 { "name": "GSO", "carrierCode": "gso" },
 { "name": "Hermes Germany B2C", "carrierCode": "hermes_germany_b2c" },
-
-
-
-
-
-
 { "name": "Hermes UK", "carrierCode": "hermes_uk" },
 { "name": "Hongkong Post", "carrierCode": "hongkong_post" },
 { "name": "LaserShip", "carrierCode": "lasership" },
@@ -51,11 +44,9 @@
 { "name": "OrangeDS", "carrierCode": "orangeds" },
 { "name": "Parcelforce", "carrierCode": "parcelforce" },
 { "name": "Parcel", "carrierCode": "parcel" },
-
 { "name": "Passport", "carrierCode": "passport" },
 { "name": "PCF", "carrierCode": "pcf" },
 { "name": "Posti", "carrierCode": "posti" },
-{ "name": "Purolator", "carrierCode": "purolator" },
 { "name": "Royal Mail", "carrierCode": "royal_mail" },
 { "name": "RR Donnelley", "carrierCode": "rr_donnelley" },
 { "name": "Russian Post", "carrierCode": "russian_post" },

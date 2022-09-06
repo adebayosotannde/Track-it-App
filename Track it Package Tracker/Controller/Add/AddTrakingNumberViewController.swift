@@ -7,6 +7,7 @@
 
 import UIKit
 import Contacts
+import CoreData
 
 extension AddTrakingNumberViewController
 {
@@ -46,7 +47,10 @@ extension AddTrakingNumberViewController
 
 class AddTrakingNumberViewController: UIViewController
 {
-
+    var pacakges = [PackageObject]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
     @IBAction func buttonTracking(_ sender: Any)
     {
         
@@ -55,6 +59,7 @@ class AddTrakingNumberViewController: UIViewController
     }
     //Package Details
     var carrierCode: String = ""
+    var carrierName: String = ""
     var trackingNumber: String = ""
     var packageDescription: String = ""
     
@@ -76,6 +81,9 @@ class AddTrakingNumberViewController: UIViewController
     @IBAction func startTrackingButtonPressed(_ sender: Any)
     {
         //TODO:
+        addParcel()
+        
+       
        
     }
     @IBAction func barcodeButtonPressed(_ sender: UIButton)
@@ -110,6 +118,7 @@ extension AddTrakingNumberViewController
           if let carrier = dict[StringLiteral.postCarrierName] as? String
         {
            carrierNameLabel.text = carrier
+              carrierName = carrier
               textFieldCheck()
             
         }
@@ -151,7 +160,7 @@ extension AddTrakingNumberViewController: UITextFieldDelegate
     
     func textFieldCheck()
     {
-        if (trackingNumberLabel.text!.isEmpty ) ||  (carrierNameLabel.text!.isEmpty)
+        if (trackingNumberLabel.text!.isEmpty ) ||  (carrierNameLabel.text!.isEmpty) || (packageDescriptionLabel.text!.isEmpty)
                 {
                     disableButton()
                 }

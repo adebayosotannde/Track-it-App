@@ -15,6 +15,12 @@
 		EE15DDE8289B37E300F83FB2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE7289B37E300F83FB2 /* GoogleSignIn */; };
 		EE15DDEA289B37E300F83FB2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE9289B37E300F83FB2 /* GoogleSignInSwift */; };
 		EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */; };
+		EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */; };
+		EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52F28B58F1800676F48 /* CoreDataManager.swift */; };
+		EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53128B58F6100676F48 /* NetWorkManager.swift */; };
+		EE56B53528B5915200676F48 /* Add - Data Manager Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53428B5915200676F48 /* Add - Data Manager Functions.swift */; };
+		EE56B53828B5B8DE00676F48 /* GoShippoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53728B5B8DE00676F48 /* GoShippoRequest.swift */; };
+		EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */; };
 		EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */; };
 		EE5829FD289EDE220073FDB7 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */; };
 		EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */; };
@@ -51,6 +57,12 @@
 		EE15DDD9289B222F00F83FB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE15DDED289B41FD00F83FB2 /* Track it Package Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Track it Package Tracker.entitlements"; sourceTree = "<group>"; };
 		EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
+		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		EE56B53128B58F6100676F48 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		EE56B53428B5915200676F48 /* Add - Data Manager Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add - Data Manager Functions.swift"; sourceTree = "<group>"; };
+		EE56B53728B5B8DE00676F48 /* GoShippoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoShippoRequest.swift; sourceTree = "<group>"; };
+		EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOSHIPPOJSONDATA.swift; sourceTree = "<group>"; };
 		EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptions.swift; sourceTree = "<group>"; };
 		EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewController.swift; sourceTree = "<group>"; };
 		EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,13 +114,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE56B53328B5912D00676F48 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */,
+				EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EE56B53628B5A6C900676F48 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */,
+				EE56B53428B5915200676F48 /* Add - Data Manager Functions.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 		EE84F309289F108900FCDBF8 /* Home Alternatives */ = {
 			isa = PBXGroup;
 			children = (
 				EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */,
-				EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */,
 				EEC9FA8928A5F706009D6848 /* PackageViewController.swift */,
-				EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */,
 				EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */,
 				EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */,
 			);
@@ -169,7 +197,6 @@
 				EEFC57492899785300EF13F4 /* View */,
 				EEFC574A2899786800EF13F4 /* Controller */,
 				EEFC572C2898B37600EF13F4 /* Assets.xcassets */,
-				EEFC572E2898B37600EF13F4 /* LaunchScreen.storyboard */,
 				EE15DDD9289B222F00F83FB2 /* GoogleService-Info.plist */,
 				EEFC57312898B37600EF13F4 /* Info.plist */,
 				EEFC57292898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld */,
@@ -220,6 +247,7 @@
 			children = (
 				EEFC57482899780300EF13F4 /* TableView Cells */,
 				EEFC57262898B37500EF13F4 /* Main.storyboard */,
+				EEFC572E2898B37600EF13F4 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +255,8 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EE56B53628B5A6C900676F48 /* Add */,
+				EE56B53328B5912D00676F48 /* Home */,
 				EE84F309289F108900FCDBF8 /* Home Alternatives */,
 				EEFC5761289AF78100EF13F4 /* Authentification */,
 			);
@@ -236,8 +266,12 @@
 		EEFC574D2899874C00EF13F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE56B53728B5B8DE00676F48 /* GoShippoRequest.swift */,
+				EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */,
 				EEAF767528B01ABC00CA9FA0 /* Carriers.swift */,
+				EE56B53128B58F6100676F48 /* NetWorkManager.swift */,
 				EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */,
+				EE56B52F28B58F1800676F48 /* CoreDataManager.swift */,
 				EEAF767728B01E4800CA9FA0 /* carriers.json */,
 				EEE4B2E6289B615300650185 /* Extensions and AppUtility */,
 				EEE4B2E3289B612F00650185 /* Strings */,
@@ -352,6 +386,8 @@
 				EEE4B2E5289B614D00650185 /* AppUtility.swift in Sources */,
 				EEFC575C2899B6E500EF13F4 /* LoginViewController.swift in Sources */,
 				EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */,
+				EE56B53828B5B8DE00676F48 /* GoShippoRequest.swift in Sources */,
+				EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */,
 				EEFC575E289AF76D00EF13F4 /* SignupViewController.swift in Sources */,
 				EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */,
 				EEE4B2E8289B85FD00650185 /* Extension UIView.swift in Sources */,
@@ -364,11 +400,15 @@
 				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
 				EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */,
 				EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */,
+				EE56B53528B5915200676F48 /* Add - Data Manager Functions.swift in Sources */,
+				EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */,
 				EEAF767A28B01F6F00CA9FA0 /* SelectCarrierViewController.swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
 				EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */,
+				EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */,
 				EE5829FD289EDE220073FDB7 /* HomeMenuViewController.swift in Sources */,
 				EEAF767C28B024EF00CA9FA0 /* PackageStatus.swift in Sources */,
+				EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
