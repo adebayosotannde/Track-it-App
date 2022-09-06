@@ -22,53 +22,58 @@ class GoShippoRequest
     
     func retriveData()
     {
-        
-        print("Retrving Data")
-        let httpAddress = "https://api.goshippo.com/tracks/?carrier=ups&tracking_number=1ZR700380350388215"
-        let code = passedPackage.packageCarrierCode!
-        let number = passedPackage.trackingNumber!
-        
-        let urlString = (httpAddress + code + number).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
-        let url = URL(string: urlString)!
-        
-        var request = URLRequest(url: url)
-        
-        
-     
-        request.addValue(token, forHTTPHeaderField: "Authorization")
-        request.httpMethod = "POST"
 
-       
-   
-        let task = URLSession.shared.dataTask(with: request)
-        { data, response, error in
-            
-            
-            if let data = data, let dataString = String(data: data, encoding: .utf8)
-            {
-                //print(dataString)
-                if let resultData = try? JSONDecoder().decode(Package.self, from: dataString.data(using: .utf8)!)
-                {
-                   print("sucess")
-                }
-                else
-                {
-                    print("Invalid Response")
-                }
-            } else if let error = error
-            {
-                print("HTTP Request Failed \(error)")
-            }
+        let url = URL(string: "https://api.goshippo.com/tracks/?carrier=" + passedPackage.packageCarrierCode! +  "&tracking_number=" + passedPackage.trackingNumber!)
+
+        guard let requestUrl = url else
+        {
+            print("GoShippo: Error Parsing Data")
+            return
         }
-        
-        
+
+        var request = URLRequest(url: requestUrl) // Create URL Request
+        request.httpMethod = "POST"  // Specify HTTP Method to use
+        request.setValue(token, forHTTPHeaderField: "Authorization") // Set HTTP Request Header
+
+        // Send HTTP Request
+        let task = URLSession.shared.dataTask(with: request)
+        { [self] (data, response, error) in
+
+        // Check if Error took place
+        if let error = error
+        {
+                        print("Error took place \(error)")
+                        return
+        }
+
+        //Read HTTP Response Status code
+            if let response = response as? HTTPURLResponse
+            {
+            }
+     
+
+        // Convert HTTP Response Data to a simple String
+        if let data = data, let dataString = String(data: data, encoding: .utf8)
+        {
+            print(dataString)
+            guard (try? JSONDecoder().decode(Package.self, from: dataString.data(using: .utf8)!)) != nil else
+            {
+
+                print("Failed: Invalid Tracking Number")
+                return
+            }
+            
+          
+           
+print("Something Strange Happened")
+            
       
-        task.resume()
+        }
+
+
+        }
+                task.resume()
         
-        
-        
-  
     }
     
 }

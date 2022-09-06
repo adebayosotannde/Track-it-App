@@ -51,6 +51,7 @@
 		EEFC575C2899B6E500EF13F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */; };
 		EEFC575E289AF76D00EF13F4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */; };
 		EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */; };
+		EEFFD49728C71515008C4267 /* DataObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFFD49628C71515008C4267 /* DataObjectManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		EEFFD49628C71515008C4267 /* DataObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObjectManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				EE56B53728B5B8DE00676F48 /* GoShippoRequest.swift */,
+				EEFFD49628C71515008C4267 /* DataObjectManager.swift */,
 				EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */,
 				EEAF767528B01ABC00CA9FA0 /* Carriers.swift */,
 				EE56B53128B58F6100676F48 /* NetWorkManager.swift */,
@@ -381,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE4B2DE289B601500650185 /* AddTrakingNumberViewController.swift in Sources */,
+				EEFFD49728C71515008C4267 /* DataObjectManager.swift in Sources */,
 				EEAF767E28B03B4E00CA9FA0 /* MainViewController.swift in Sources */,
 				EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */,
 				EEE4B2E5289B614D00650185 /* AppUtility.swift in Sources */,

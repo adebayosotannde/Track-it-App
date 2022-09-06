@@ -112,5 +112,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BA03845-D9A1-4C46-B7D3-0FC5E75264A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Track it Package Tracker/Model/GOSHIPPOJSONDATA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "Package"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "4BA03845-D9A1-4C46-B7D3-0FC5E75264A6 - 3ede922729b5c96f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Track_it_Package_Tracker.Package.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Track_it_Package_Tracker.Package.CodingKeys&gt;"
+                  moduleName = "Track it Package Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adebayosotannde/Desktop/Track%20it%20Package%20Tracker/Track%20it%20Package%20Tracker/Model/GOSHIPPOJSONDATA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "4BA03845-D9A1-4C46-B7D3-0FC5E75264A6 - b2aa190b0ba0f473"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Track_it_Package_Tracker.Package.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "Track it Package Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adebayosotannde/Desktop/Track%20it%20Package%20Tracker/Track%20it%20Package%20Tracker/Model/GOSHIPPOJSONDATA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
