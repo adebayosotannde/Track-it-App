@@ -19,6 +19,15 @@ extension HomeMenuViewController
         home = self.containerView.transform
         updateUI()
     registerNotificationCenter()
+        let timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        
+       
+       
+    }
+    
+   
+    @objc func fireTimer() {
+        print("Timer fired!")
     }
     
 }

@@ -12,13 +12,20 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-   
+    let userNotificationCenter = UNUserNotificationCenter.current()
     
     var orientationLock = UIInterfaceOrientationMask .portrait
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //Enable Background Refresh
+        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
+
+            UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
+        
+        //Request notification permission
+        requestNotficationPermission()
         
         //MARK: - Configure Firebase
         FirebaseApp.configure()
@@ -93,5 +100,80 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    
+    
+    
+    //MARK: - Ap Refresh Function
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
+    {
+
+      let successCallback: (_ data: Data, _ error: Error) -> Void = { (data, error) in
+          if error != nil {
+          // There is an error
+          completionHandler(.failed)
+        } else if data.isEmpty {
+          // No new data
+          completionHandler(.noData)
+        } else {
+          // There is a new data set
+          completionHandler(.newData)
+        }
+      }
+      
+      // Fetch data from your server, e.g. using Alamofire; Bear in mind, the duration of fetching causes a less frequency app refresh!
+        CoreDataManager.sharedManager.fetchDataForAllPackages()
+        sendNotification()
+    }
+    
+    func sendNotification()
+    {
+        
+       
+        
+        // Create new notifcation content instance
+        let notificationContent = UNMutableNotificationContent()
+
+        // Add the content to the notification content
+        notificationContent.title = "Test"
+        notificationContent.body = "Test body"
+        notificationContent.badge = NSNumber(value: 3)
+
+        // Add an attachment to the notification content
+        if let url = Bundle.main.url(forResource: "dune",
+                                        withExtension: "png") {
+            if let attachment = try? UNNotificationAttachment(identifier: "dune",
+                                                                url: url,
+                                                                options: nil) {
+                notificationContent.attachments = [attachment]
+            }
+        }
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5,
+                                                        repeats: false)
+   
+        let request = UNNotificationRequest(identifier: "testNotification",
+                                            content: notificationContent,
+                                            trigger: trigger)
+        
+        userNotificationCenter.add(request) { (error) in
+            if let error = error {
+                print("Notification Error: ", error)
+            }
+        }
+    
+    }
+    
+    func requestNotficationPermission()
+    {
+        //Request Nottification
+        let authOptions = UNAuthorizationOptions.init(arrayLiteral: .alert, .badge, .sound)
+        self.userNotificationCenter.requestAuthorization(options: authOptions) { (success, error) in
+            if let error = error {
+                print("Error: ", error)
+            }
+        }
+    }
+    
+    
 }
 

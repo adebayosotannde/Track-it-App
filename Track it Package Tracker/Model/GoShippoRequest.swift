@@ -75,7 +75,7 @@ print("Sucess")
             self.passedPackage.lastUpdated = data.getWhenThePackageWasLastUpdated()
             self.passedPackage.lastLocation = data.getMostRecentLocation()
             self.passedPackage.delivered = data.getIfPackageHasbeenDelivered()
-            CoreDataManager.sharedManager.save()
+            CoreDataManager.sharedManager.save() //Saves Data and Refreshes View
             
       
         }

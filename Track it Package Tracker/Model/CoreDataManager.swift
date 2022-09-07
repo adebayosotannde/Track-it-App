@@ -118,6 +118,7 @@ class CoreDataManager
     
     func fetchDataForAllPackages()
     {
+        print("Fetching Data for All Packages")
         DispatchQueue.main.async //Runs in the background
                {
                    for package in self.packages
@@ -135,7 +136,13 @@ class CoreDataManager
 
     func updateTrackingNumber(updateThis: PackageObject)
     {
-        
+        if updateThis.delivered == false
+       {
+           DispatchQueue.main.async
+           {
+               NetWorkManager.sharedManager.requestData(packageDetail: updateThis)
+           }
+       }
     }
     func postBarcodeNotification(code: String)
     {

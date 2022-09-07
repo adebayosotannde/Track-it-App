@@ -63,11 +63,18 @@ extension PackageViewController
          setDeliveryDate()
          setTransitStatus()
          setErrorMessageView()
+        CoreDataManager.sharedManager.updateTrackingNumber(updateThis: passedPackage!) //Checks for updates
     }
     
     func updatePageWithObject()
     {
-     settup()
+        setTitle()
+         setLogoLabel()
+         setLastupdated()
+
+         setDeliveryDate()
+         setTransitStatus()
+         setErrorMessageView()
         packgeTableViewController.reloadData() //Additional
     }
     

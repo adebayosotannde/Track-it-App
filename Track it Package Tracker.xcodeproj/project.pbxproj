@@ -14,6 +14,7 @@
 		EE15DDE5289B366700F83FB2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE4289B366700F83FB2 /* FirebaseFirestoreSwift */; };
 		EE15DDE8289B37E300F83FB2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE7289B37E300F83FB2 /* GoogleSignIn */; };
 		EE15DDEA289B37E300F83FB2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE9289B37E300F83FB2 /* GoogleSignInSwift */; };
+		EE19AAE428C8ED9B0094E8FE /* fgdfg.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAE328C8ED9B0094E8FE /* fgdfg.swift */; };
 		EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */; };
 		EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */; };
 		EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52F28B58F1800676F48 /* CoreDataManager.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		EE15DDD9289B222F00F83FB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE15DDED289B41FD00F83FB2 /* Track it Package Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Track it Package Tracker.entitlements"; sourceTree = "<group>"; };
+		EE19AAE328C8ED9B0094E8FE /* fgdfg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fgdfg.swift; sourceTree = "<group>"; };
 		EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
 		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */,
 				EEC9FA8928A5F706009D6848 /* PackageViewController.swift */,
+				EE19AAE328C8ED9B0094E8FE /* fgdfg.swift */,
 				EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */,
 				EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */,
 			);
@@ -396,6 +399,7 @@
 				EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */,
 				EEE4B2E8289B85FD00650185 /* Extension UIView.swift in Sources */,
 				EEE4B2E2289B611E00650185 /* StringValues.swift in Sources */,
+				EE19AAE428C8ED9B0094E8FE /* fgdfg.swift in Sources */,
 				EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */,
 				EEFC57402899779E00EF13F4 /* ActivityTableViewCell.swift in Sources */,
 				EEAF767628B01ABC00CA9FA0 /* Carriers.swift in Sources */,
