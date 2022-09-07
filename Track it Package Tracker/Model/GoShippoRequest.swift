@@ -55,17 +55,27 @@ class GoShippoRequest
         // Convert HTTP Response Data to a simple String
         if let data = data, let dataString = String(data: data, encoding: .utf8)
         {
-            print(dataString)
+   
             guard (try? JSONDecoder().decode(Package.self, from: dataString.data(using: .utf8)!)) != nil else
             {
-
+                CoreDataManager.sharedManager.updateInvalidTrackingNumber(package: self.passedPackage)
                 print("Failed: Invalid Tracking Number")
                 return
             }
             
           
            
-print("Something Strange Happened")
+print("Sucess")
+            
+            let data = DataObjectManager(package: self.passedPackage)
+            self.passedPackage.testData = dataString.data(using: .utf8)
+            self.passedPackage.isValidTrackingNumber = true // set tracking number as a valid tracking number
+            self.passedPackage.currentDescription = data.getMostRecentActivityDescription()
+            self.passedPackage.circleIndicatorColor = data.getMostRecentColorIndicatorStatus()
+            self.passedPackage.lastUpdated = data.getWhenThePackageWasLastUpdated()
+            self.passedPackage.lastLocation = data.getMostRecentLocation()
+            self.passedPackage.delivered = data.getIfPackageHasbeenDelivered()
+            CoreDataManager.sharedManager.save()
             
       
         }

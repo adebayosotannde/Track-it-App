@@ -17,7 +17,7 @@ extension AddTrakingNumberViewController
 
         if pacakgeExist
         {
-           duplicatePackgeError()
+           //duplicatePackgeError()
         }
         else
         {

@@ -161,6 +161,8 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
+        let aPackage: PackageObject = packages[indexPath.row]
+        
         switch tableView
         {
         case menuTableView:
@@ -170,7 +172,16 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let packageView = storyBoard.instantiateViewController(withIdentifier: "PackageViewController") as! PackageViewController
+            
+            
+            packageView.passedPackage = aPackage
+            packageView.modalPresentationStyle = .fullScreen
+            packageView.modalTransitionStyle = .crossDissolve
+            tableView.deselectRow(at: indexPath, animated: true)
+            packageView.modalPresentationStyle = .popover
             navigationController?.pushViewController(packageView, animated: true)
+            
+        
             
         default:
             fatalError()

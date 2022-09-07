@@ -7,10 +7,13 @@
         <attribute name="delivered" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="descriptionOfPackage" optional="YES" attributeType="String"/>
         <attribute name="isValidTrackingNumber" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastLocation" optional="YES" attributeType="String"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="String"/>
         <attribute name="packageCarrierCode" optional="YES" attributeType="String"/>
+        <attribute name="testData" optional="YES" attributeType="Binary"/>
         <attribute name="trackingNumber" optional="YES" attributeType="String" defaultValueString="Invalid Tracking Number"/>
     </entity>
     <elements>
-        <element name="PackageObject" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="PackageObject" positionX="-63" positionY="-18" width="128" height="194"/>
     </elements>
 </model>
