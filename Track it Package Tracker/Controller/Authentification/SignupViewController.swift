@@ -41,7 +41,7 @@ class SignupViewController: UIViewController
     
     @IBAction func createAccountButtonPresed(_ sender: UIButton)
     {
-        
+        SignUserUp()
     }
 
     @IBAction func signInGoogle(_ sender: GIDSignInButton)
@@ -257,3 +257,65 @@ extension SignupViewController: ASAuthorizationControllerDelegate,  ASAuthorizat
     }
 }
 
+extension SignupViewController
+{
+    func SignUserUp()
+    {
+        if passwordTextField.text! == verifyPasswordTextField.text!
+        {
+           if let email = emailTextField.text, let password = passwordTextField.text
+           {
+               Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                   if let e = error
+                   {
+                       print(e)
+                   
+                       //AlertBox
+                       let alert = UIAlertController(title: "error", message: e.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                   
+                       alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler:
+                       { UIAlertAction in
+                           
+                       }))
+                       self.present(alert, animated: true, completion: nil)//Displays the Alert Box
+                   
+                   
+                   } else
+                   {
+                       //AlertBox
+                       let alert = UIAlertController(title: "Sucess", message: "Account Sucessfully Created. Press Ok to go Home", preferredStyle: UIAlertController.Style.alert)
+                   
+                       alert.addAction(UIAlertAction(title: "Go Home", style: .default, handler:
+                    { action in
+                           
+                           
+                           //Go to the Home Screen
+                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeMenuViewController") as! HomeMenuViewController
+                            self.navigationController?.pushViewController(newViewController, animated: true)
+                           
+                           
+                       }))
+                       
+                       
+                       self.present(alert, animated: true, completion: nil)//Displays the Alert Box
+                      
+                   }
+               }
+           }
+       }
+        else
+        {
+            //AlertBox
+            let alert = UIAlertController(title: "Password Error", message: "Passwords do not match. ", preferredStyle: UIAlertController.Style.alert)
+        
+            alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler:
+            { UIAlertAction in
+                
+            }))
+            self.present(alert, animated: true, completion: nil)//Displays the Alert Box
+        }
+        
+    }
+    
+}

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController:UIViewController
 {
@@ -14,45 +15,53 @@ class MainViewController:UIViewController
     {
         super.viewDidLoad()
         //Step 1: Decide which View Controller to display next
-//       launchNextViewController()
+       launchNextViewController()
         
     }
     
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
-        launchNextViewController()
+      
     }
     
     func launchNextViewController()
     {
-        
-        var userIsLoggedIn = true
-        
-        if userIsLoggedIn
-        {
-//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-//            self.navigationController?.pushViewController(newViewController, animated: true)
-//
-            
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeMenuViewController") as! HomeMenuViewController
-            self.navigationController?.pushViewController(newViewController, animated: true)
-            
-            
-            
-            
-            
-        }
-        else
-        {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            self.navigationController?.pushViewController(newViewController, animated: true)
-        }
+        viewControllerToLaunch()
+       
 }
+    
+    
+    func viewControllerToLaunch()
+    
+        {
+            //Sign User Out if User is Currently Logged in
+                    if Auth.auth().currentUser != nil
+                    {
+                        
+                         
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeMenuViewController") as! HomeMenuViewController
+                        self.navigationController?.pushViewController(newViewController, animated: true)
+                    }
+            else
+            {
+                
+                
+                
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            }
+            
+        
+          
+
+             
+            
+            
+    }
+    
     
 }
 

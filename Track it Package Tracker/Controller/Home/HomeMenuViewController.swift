@@ -21,6 +21,10 @@ extension HomeMenuViewController
     registerNotificationCenter()
         let timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
         
+        
+        //Setup for Side Menu
+        setupSideMenu()
+        
        
        
     }
@@ -50,9 +54,14 @@ class HomeMenuViewController: UIViewController
     var menu = false
     var home = CGAffineTransform()
     
-    
+    //Side Menu Outlets
+    @IBOutlet weak var currentVersion: UIButton!
 
     @IBOutlet weak var hamburgerMenuItem: UIBarButtonItem!
+    @IBOutlet weak var accountStatusButton: UIButton!
+    @IBOutlet weak var welcomeTExt: UILabel!
+    
+    
     
     @IBAction func showHamburgerMenu(_ sender: UIBarButtonItem)
     {
@@ -94,6 +103,15 @@ class HomeMenuViewController: UIViewController
         
         
     }
+    
+    @IBAction func purchaseApp(_ sender: Any)
+    {
+    }
+    @IBAction func signonandLogoutPressed(_ sender: Any)
+    {
+        loginOrSignout()
+    }
+    
 }
 
 //MARK: - Table View Controller Functions
@@ -120,7 +138,7 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
         case menuTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: SideMenuTableViewCell.cellIdentifier, for: indexPath) as! SideMenuTableViewCell
             cell.descriptionLabel.text = options[indexPath.row].title
-            cell.descriptionLabel.textColor = .black
+            cell.descriptionLabel.textColor = options[indexPath.row].colors
             return cell
         case packagesTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: PackageTableViewCell.cellIdentifier, for: indexPath) as! PackageTableViewCell
@@ -165,8 +183,7 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
     
     }
     
-    
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         

@@ -6,13 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
 
-var options: [option] = [option(title: "Account and Settings", segue: "HomeSegue"),
-                         option(title: "Delivered Packages",segue: "SettingsSegue"),
-                         option(title: "Donations",segue: "SettingsSegue"),
-                         option(title: "Feedback and Support",segue: "SettingsSegue"),
-                         option(title: "Logout",segue: "SettingsSegue"),
+var options: [option] = [option(title: "Login", segue: "HomeSegue", colors: .black),
+                         option(title: "Sign up",segue: "SettingsSegue",colors: .black),
+                         option(title: "Donations",segue: "SettingsSegue",colors: .black),
+                         option(title: "Feedback and Support",segue: "SettingsSegue",colors: .black),
+                         option(title: "Logout",segue: "SettingsSegue",colors: .blue),
+                        
                          
 ]
 
@@ -20,4 +22,5 @@ struct option
 {
     var title = String()
     var segue = String()
+    var colors = UIColor()
 }

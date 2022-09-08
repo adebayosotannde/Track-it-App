@@ -15,6 +15,10 @@
 		EE15DDE8289B37E300F83FB2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE7289B37E300F83FB2 /* GoogleSignIn */; };
 		EE15DDEA289B37E300F83FB2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE9289B37E300F83FB2 /* GoogleSignInSwift */; };
 		EE19AAE428C8ED9B0094E8FE /* fgdfg.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAE328C8ED9B0094E8FE /* fgdfg.swift */; };
+		EE19AAE728C9111E0094E8FE /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = EE19AAE628C9111E0094E8FE /* Siren */; };
+		EE19AAE928C91AB60094E8FE /* HomeMenuViewController Side Menu .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */; };
+		EE19AAEB28C9594E0094E8FE /* EditTrackingNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */; };
+		EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */; };
 		EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */; };
 		EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */; };
 		EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52F28B58F1800676F48 /* CoreDataManager.swift */; };
@@ -59,6 +63,9 @@
 		EE15DDD9289B222F00F83FB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE15DDED289B41FD00F83FB2 /* Track it Package Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Track it Package Tracker.entitlements"; sourceTree = "<group>"; };
 		EE19AAE328C8ED9B0094E8FE /* fgdfg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fgdfg.swift; sourceTree = "<group>"; };
+		EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeMenuViewController Side Menu .swift"; sourceTree = "<group>"; };
+		EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackingNumberViewController.swift; sourceTree = "<group>"; };
+		EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edit Data and Function.swift"; sourceTree = "<group>"; };
 		EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
 		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -112,16 +119,27 @@
 				EE15DDEA289B37E300F83FB2 /* GoogleSignInSwift in Frameworks */,
 				EE15DDE3289B366700F83FB2 /* FirebaseFirestore in Frameworks */,
 				EE15DDE5289B366700F83FB2 /* FirebaseFirestoreSwift in Frameworks */,
+				EE19AAE728C9111E0094E8FE /* Siren in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE19AAEE28C969870094E8FE /* Edit Tracking Number VC */ = {
+			isa = PBXGroup;
+			children = (
+				EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */,
+				EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */,
+			);
+			path = "Edit Tracking Number VC";
+			sourceTree = "<group>";
+		};
 		EE56B53328B5912D00676F48 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */,
+				EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */,
 				EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */,
 			);
 			path = Home;
@@ -260,6 +278,7 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EE19AAEE28C969870094E8FE /* Edit Tracking Number VC */,
 				EE56B53628B5A6C900676F48 /* Add */,
 				EE56B53328B5912D00676F48 /* Home */,
 				EE84F309289F108900FCDBF8 /* Home Alternatives */,
@@ -318,6 +337,7 @@
 				EE15DDE4289B366700F83FB2 /* FirebaseFirestoreSwift */,
 				EE15DDE7289B37E300F83FB2 /* GoogleSignIn */,
 				EE15DDE9289B37E300F83FB2 /* GoogleSignInSwift */,
+				EE19AAE628C9111E0094E8FE /* Siren */,
 			);
 			productName = "Track it Package Tracker";
 			productReference = EEFC571D2898B37500EF13F4 /* Track it Package Tracker.app */;
@@ -352,6 +372,7 @@
 				EE15DDDE289B352400F83FB2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				EE15DDE1289B366700F83FB2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				EE15DDE6289B37E300F83FB2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				EE19AAE528C9111E0094E8FE /* XCRemoteSwiftPackageReference "Siren" */,
 			);
 			productRefGroup = EEFC571E2898B37500EF13F4 /* Products */;
 			projectDirPath = "";
@@ -387,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE4B2DE289B601500650185 /* AddTrakingNumberViewController.swift in Sources */,
+				EE19AAEB28C9594E0094E8FE /* EditTrackingNumberViewController.swift in Sources */,
 				EEFFD49728C71515008C4267 /* DataObjectManager.swift in Sources */,
 				EEAF767E28B03B4E00CA9FA0 /* MainViewController.swift in Sources */,
 				EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */,
@@ -407,10 +429,12 @@
 				EEE4B2EA289B86E300650185 /* Extension UIViewController.swift in Sources */,
 				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
 				EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */,
+				EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */,
 				EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */,
 				EE56B53528B5915200676F48 /* Add - Data Manager Functions.swift in Sources */,
 				EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */,
 				EEAF767A28B01F6F00CA9FA0 /* SelectCarrierViewController.swift in Sources */,
+				EE19AAE928C91AB60094E8FE /* HomeMenuViewController Side Menu .swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
 				EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */,
 				EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */,
@@ -674,6 +698,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		EE19AAE528C9111E0094E8FE /* XCRemoteSwiftPackageReference "Siren" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArtSabintsev/Siren.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -706,6 +738,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE15DDE6289B37E300F83FB2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		EE19AAE628C9111E0094E8FE /* Siren */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE19AAE528C9111E0094E8FE /* XCRemoteSwiftPackageReference "Siren" */;
+			productName = Siren;
 		};
 /* End XCSwiftPackageProductDependency section */
 

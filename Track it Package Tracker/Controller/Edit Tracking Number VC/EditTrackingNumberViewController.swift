@@ -9,7 +9,7 @@ import UIKit
 import Contacts
 import CoreData
 
-extension AddTrakingNumberViewController
+extension EditTrackingNumberViewController
 {
     override func viewDidLoad()
     {
@@ -17,7 +17,20 @@ extension AddTrakingNumberViewController
         registerNotificationCenter()
         barcodeButton.blink()
         self.carrierNameLabel.delegate = self
-        disableButton()
+       
+        
+        
+        setUpEditTrackingNumberViewController()
+   
+    }
+    
+    func setUpEditTrackingNumberViewController()
+    {
+        trackingNumberLabel.text = passedPackage?.trackingNumber
+        carrierNameLabel.text = passedPackage?.carrierName
+        packageDescriptionLabel.text = passedPackage?.descriptionOfPackage
+        carrierImage.image = UIImage(named: (passedPackage?.packageCarrierCode)!)
+        
     }
 
     override func viewDidAppear(_ animated: Bool)
@@ -45,11 +58,15 @@ extension AddTrakingNumberViewController
     }
 }
 
-class AddTrakingNumberViewController: UIViewController
+class EditTrackingNumberViewController: UIViewController
 {
+    //MARK: - Variables and Constants
+    var passedPackage:PackageObject?
+    var indexPassed = 0
     var pacakges = [PackageObject]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var launchBarcodeViewController = false
     
     @IBAction func buttonTracking(_ sender: Any)
     {
@@ -64,7 +81,7 @@ class AddTrakingNumberViewController: UIViewController
     var packageDescription: String = ""
     
     
-    var launchBarcodeViewController = false
+    
 
 
     //IBOUTLETS
@@ -81,7 +98,8 @@ class AddTrakingNumberViewController: UIViewController
     @IBAction func startTrackingButtonPressed(_ sender: Any)
     {
         //TODO:
-        addParcel()
+        createNewPackageObject()
+        dismissViewController()
         
        
        
@@ -90,10 +108,12 @@ class AddTrakingNumberViewController: UIViewController
     {
         print("Barcode Button Pressed")
     }
+    
+    
 }
 
 //MARK: - Notification Canter
-extension AddTrakingNumberViewController
+extension EditTrackingNumberViewController
 {
     func registerNotificationCenter()
     {
@@ -137,13 +157,18 @@ extension AddTrakingNumberViewController
     }
 }
 
-extension AddTrakingNumberViewController: UITextFieldDelegate
+extension EditTrackingNumberViewController: UITextFieldDelegate
 {
     
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SelectCarrierViewController") as! SelectCarrierViewController
+//        navigationController?.pushViewController(newViewController, animated: true)
+//           return false
 
+//        performSegue(withIdentifier: "mySegueID", sender: nil)
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                let newViewController = storyBoard.instantiateViewController(withIdentifier: "SelectCarrierViewController") as! SelectCarrierViewController

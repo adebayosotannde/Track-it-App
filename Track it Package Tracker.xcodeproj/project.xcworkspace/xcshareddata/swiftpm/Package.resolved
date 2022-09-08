@@ -127,6 +127,15 @@
       }
     },
     {
+      "identity" : "siren",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ArtSabintsev/Siren.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3bd7b595fb85134de53da1abd26b1663e4ce9472"
+      }
+    },
+    {
       "identity" : "swift-protobuf",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",

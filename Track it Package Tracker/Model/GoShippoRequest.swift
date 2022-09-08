@@ -13,11 +13,15 @@ class GoShippoRequest
     //APi Key's
     let token = "ShippoToken shippo_live_5f9402689b38118662de1e49be8828fa33c05fd6" //Go Shipp api key
     var passedPackage: PackageObject
+    
+   
   
     init(package: PackageObject)
     {
       passedPackage = package//Set the package object
         retriveData()
+       
+        
     }
     
     func retriveData()
@@ -66,8 +70,9 @@ class GoShippoRequest
           
            
 print("Sucess")
-            
             let data = DataObjectManager(package: self.passedPackage)
+            
+            
             self.passedPackage.testData = dataString.data(using: .utf8)
             self.passedPackage.isValidTrackingNumber = true // set tracking number as a valid tracking number
             self.passedPackage.currentDescription = data.getMostRecentActivityDescription()

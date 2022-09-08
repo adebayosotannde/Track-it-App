@@ -8,10 +8,13 @@
 import UIKit
 import CoreData
 import Firebase
+import Siren
+import Foundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    static let sharedManager = AppDelegate() //Create Instance of Persistance
     let userNotificationCenter = UNUserNotificationCenter.current()
     
     var orientationLock = UIInterfaceOrientationMask .portrait
@@ -107,24 +110,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
 
-      let successCallback: (_ data: Data, _ error: Error) -> Void = { (data, error) in
-          if error != nil {
-          // There is an error
-          completionHandler(.failed)
-        } else if data.isEmpty {
-          // No new data
-          completionHandler(.noData)
-        } else {
-          // There is a new data set
-          completionHandler(.newData)
-        }
-      }
       
-      // Fetch data from your server, e.g. using Alamofire; Bear in mind, the duration of fetching causes a less frequency app refresh!
+
+      
         CoreDataManager.sharedManager.fetchDataForAllPackages()
         sendNotification()
+        completionHandler(UIBackgroundFetchResult.newData)
     }
     
+    
+}
+
+//MARK: - USer Notification
+extension AppDelegate
+{
+    /**
+     Request permission from the user to display notifications
+     */
+    func requestNotficationPermission()
+    {
+        //Request Nottification
+        let authOptions = UNAuthorizationOptions.init(arrayLiteral: .alert, .badge, .sound)
+        self.userNotificationCenter.requestAuthorization(options: authOptions) { (success, error) in
+            if let error = error {
+                print("Error: ", error)
+            }
+        }
+    }
+    
+    /**
+     Sends a generic notification to the user
+     */
     func sendNotification()
     {
         
@@ -134,9 +150,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationContent = UNMutableNotificationContent()
 
         // Add the content to the notification content
-        notificationContent.title = "Test"
-        notificationContent.body = "Test body"
-        notificationContent.badge = NSNumber(value: 3)
+        notificationContent.title = "Your Package is moving 🚚 "
+        notificationContent.body = "Check Status"
+        notificationContent.badge = NSNumber(value: 0)
 
         // Add an attachment to the notification content
         if let url = Bundle.main.url(forResource: "dune",
@@ -163,17 +179,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     }
     
-    func requestNotficationPermission()
+    
+    
+    // This method is called when user clicked on the notification
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
     {
-        //Request Nottification
-        let authOptions = UNAuthorizationOptions.init(arrayLiteral: .alert, .badge, .sound)
-        self.userNotificationCenter.requestAuthorization(options: authOptions) { (success, error) in
-            if let error = error {
-                print("Error: ", error)
-            }
-        }
+        coordinateToSomeVC()
+    }
+
+    private func coordinateToSomeVC()
+    {
+        guard let window = UIApplication.shared.keyWindow else { return }
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let yourVC = storyboard.instantiateViewController(identifier: "HomeMenuViewController")
+        
+        let navController = UINavigationController(rootViewController: yourVC)
+        navController.modalPresentationStyle = .fullScreen
+
+        // you can assign your vc directly or push it in navigation stack as follows:
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
     }
     
     
+    
+   
 }
 
+//MARK: - Siren Functions
+extension AppDelegate
+{
+    func setupSirenUpdates()
+    {
+        //MARK: - Siren
+        Siren.shared.wail() //Siren import statement.
+        //Update Message Presented to User.
+        Siren.shared.presentationManager = PresentationManager(alertTintColor: .systemBlue, appName: "UPS Tracker", alertTitle: "A New Version is Available", alertMessage: "A new version of the app is available. Please update as soon as possible. Thank you", updateButtonTitle: "Update", nextTimeButtonTitle: "Not Now", skipButtonTitle: "Skip this Version", forceLanguageLocalization: .none)
+       
+        Siren.shared.rulesManager = RulesManager(globalRules: .annoying, showAlertAfterCurrentVersionHasBeenReleasedForDays: 1) //Waits 1 days after update release to upgrade user.
+    }
+}

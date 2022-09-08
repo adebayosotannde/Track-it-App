@@ -38,6 +38,72 @@ class PackageViewController: UIViewController
         print("Hello")
     }
     
+    @IBAction func editButtonPressed(_ sender: Any)
+    {
+
+
+        let alertController = UIAlertController(title: "Shipment Settings", message: "Choose and Action", preferredStyle: .actionSheet)
+        
+//        let alertController = UIAlertController()
+        
+        let logoutAction = UIAlertAction(title: "Edit Shipment", style: .default)
+        { (action) in
+            //Handle Edit Shipement Action
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let editBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "EditTrackingNumberViewController") as! EditTrackingNumberViewController
+            editBarcodeViewController.passedPackage = self.passedPackage
+            
+            self.navigationController?.pushViewController(editBarcodeViewController, animated: true)
+        }
+        // add the logout action to the alert controller
+        alertController.addAction(logoutAction)
+        
+        
+        if passedPackage?.delivered == true
+        {
+            
+        }
+        else
+        {
+            let logoutAction2 = UIAlertAction(title: "Mark Delivered", style: .default)
+            { (action) in
+                // handle case of user logging out
+                self.passedPackage?.delivered = true
+            }
+            // add the logout action to the alert controller
+            alertController.addAction(logoutAction2)
+        }
+        
+      
+        
+        
+        
+//        let logoutAction3 = UIAlertAction(title: "Delete", style: .destructive)
+//        { [self] (action) in
+//            // Delete Package
+//
+//            self.navigationController?.popViewController(animated: true)
+//            let copy = passedPackage
+//            CoreDataManager.sharedManager.delete(person: copy!)
+//
+//
+//        }
+//        // add the logout action to the alert controller
+//        alertController.addAction(logoutAction3)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            // handle case of user canceling. Doing nothing will dismiss the view.
+        }
+        // add the cancel action to the alert controller
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
+        {
+            // optional code for what happens after the alert controller has finished presenting
+        }
+        
+    }
+    
 }
 //MARK: - Set UP Functions
 extension PackageViewController

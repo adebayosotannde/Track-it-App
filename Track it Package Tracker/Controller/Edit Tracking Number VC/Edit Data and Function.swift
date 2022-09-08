@@ -8,25 +8,9 @@
 import Foundation
 import UIKit
 
-extension AddTrakingNumberViewController
+extension EditTrackingNumberViewController
 {
-    func addParcel()
-    {
-        //Checking if Tracking Number Exist Already
-        let pacakgeExist = checkForDuplicaterTrackingNumber(trackingNumber: trackingNumberLabel.text!)
-
-        if pacakgeExist
-        {
-           duplicatePackgeError()
-        }
-        else
-        {
-
-            createNewPackageObject()
-            dismissViewController()
-        }
-
-    }
+   
     
     func checkForDuplicaterTrackingNumber(trackingNumber: String) -> Bool
     {
@@ -68,20 +52,21 @@ extension AddTrakingNumberViewController
     
     func createNewPackageObject()
     {
-        let newPackage = PackageObject(context: context)
+       
 
         //Set Package properties
-        newPackage.trackingNumber = trackingNumberLabel.text!
-        newPackage.descriptionOfPackage = packageDescriptionLabel.text
-        newPackage.packageCarrierCode = carrierCode
-        newPackage.carrierName = carrierName
+        passedPackage!.trackingNumber = trackingNumberLabel.text!
+        passedPackage!.descriptionOfPackage = packageDescriptionLabel.text
+        passedPackage!.packageCarrierCode = carrierCode
+        passedPackage!.carrierName = carrierName
         
-        newPackage.circleIndicatorColor = StringLiteral.redColor
-        newPackage.currentDescription =  StringLiteral.defaultDescription
+        passedPackage!.circleIndicatorColor = StringLiteral.redColor
+        passedPackage!.currentDescription =  StringLiteral.defaultDescription
+        passedPackage?.delivered = false
         
         
         CoreDataManager.sharedManager.save()//Cause the
-        NetWorkManager.sharedManager.requestData(packageDetail: newPackage)
+        NetWorkManager.sharedManager.requestData(packageDetail: passedPackage!)
     }
     
     func dismissViewController()
