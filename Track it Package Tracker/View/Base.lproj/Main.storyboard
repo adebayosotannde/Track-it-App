@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EL-7Y-7ho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8980" y="-190"/>
+            <point key="canvasLocation" x="8240" y="-190"/>
         </scene>
         <!--Add Traking Number View Controller-->
         <scene sceneID="j9g-I7-8Is">
@@ -205,7 +205,7 @@
                                                     <segue destination="cqL-KM-8dN" kind="show" identifier="barcodeScanner" id="ZfS-Ae-A1v"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1ZR700380329283387" borderStyle="roundedRect" placeholder="Tracking Number" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tc2-vC-VcA">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tracking Number" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tc2-vC-VcA">
                                                 <rect key="frame" x="80" y="0.0" width="288" height="60"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -360,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1J-u2-Ghk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7841" y="889"/>
+            <point key="canvasLocation" x="7210" y="600"/>
         </scene>
         <!--Barcode Scenner View Controller-->
         <scene sceneID="F6N-Sa-3hq">
@@ -478,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRt-5V-A4z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9314" y="889"/>
+            <point key="canvasLocation" x="8239" y="612"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nb4-8t-aJ4">
@@ -497,7 +497,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfc-p0-gzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5265" y="-776"/>
+            <point key="canvasLocation" x="4426" y="-776"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Lyn-iq-sQO">
@@ -546,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zue-6h-kKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6219" y="-776"/>
+            <point key="canvasLocation" x="5606" y="-776"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4HE-F5-KWw">
@@ -801,7 +801,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzS-Ad-i9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7841" y="-1860"/>
+            <point key="canvasLocation" x="7210" y="-1860"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="quG-ce-E4b">
@@ -1109,7 +1109,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRe-rv-0ip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8854" y="-1860"/>
+            <point key="canvasLocation" x="8239" y="-1860"/>
         </scene>
         <!--Forget Password View Controller-->
         <scene sceneID="HjS-Uy-oi2">
@@ -1267,7 +1267,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czq-lJ-ro0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7841" y="-1039"/>
+            <point key="canvasLocation" x="7210" y="-1059"/>
         </scene>
         <!--END USER LICENSE AGREEMENT-->
         <scene sceneID="INQ-rU-KHy">
@@ -3576,7 +3576,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBP-TW-nbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9900" y="-1860"/>
+            <point key="canvasLocation" x="9233" y="-1860"/>
         </scene>
         <!--Home-->
         <scene sceneID="ewR-1m-1JP">
@@ -3812,7 +3812,7 @@ Cg
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="7183" y="-97"/>
+            <point key="canvasLocation" x="7211" y="-190"/>
         </scene>
         <!--Select a Carrier-->
         <scene sceneID="ypn-uQ-jil">
@@ -3863,7 +3863,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgN-mK-z6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7841" y="1606"/>
+            <point key="canvasLocation" x="7210" y="1469"/>
         </scene>
         <!--Edit Tracking Number View Controller-->
         <scene sceneID="thX-13-oAH">
@@ -4032,11 +4032,11 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8MS-qv-91b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9861" y="-173"/>
+            <point key="canvasLocation" x="9234" y="-190"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZfS-Ae-A1v"/>
+        <segue reference="hdw-E8-kwq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
