@@ -3894,28 +3894,13 @@ Cg
                                                     <segue destination="cqL-KM-8dN" kind="show" id="hdw-E8-kwq"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1ZR700380329283387" borderStyle="roundedRect" placeholder="Tracking Number" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZsN-Dj-Vmj">
-                                                <rect key="frame" x="80" y="0.0" width="288" height="60"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                                                <connections>
-                                                    <action selector="buttonTracking:" destination="Z7Z-K4-HbS" eventType="editingDidEnd" id="3iZ-7y-mNs"/>
-                                                    <action selector="buttonTracking:" destination="Z7Z-K4-HbS" eventType="editingChanged" id="Bua-xE-rkU"/>
-                                                    <action selector="buttonTracking:" destination="Z7Z-K4-HbS" eventType="editingDidBegin" id="PRZ-KZ-4WS"/>
-                                                </connections>
-                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="greenTheme"/>
                                         <constraints>
-                                            <constraint firstItem="ZsN-Dj-Vmj" firstAttribute="top" secondItem="eZh-eR-uSK" secondAttribute="top" id="7PF-2J-Rdg"/>
                                             <constraint firstItem="3zY-x2-tmv" firstAttribute="leading" secondItem="eZh-eR-uSK" secondAttribute="leading" id="SVL-xM-vQk"/>
-                                            <constraint firstAttribute="bottom" secondItem="ZsN-Dj-Vmj" secondAttribute="bottom" id="Yin-l4-hoS"/>
-                                            <constraint firstItem="ZsN-Dj-Vmj" firstAttribute="leading" secondItem="3zY-x2-tmv" secondAttribute="trailing" constant="20" id="cQR-l3-8bc"/>
                                             <constraint firstItem="3zY-x2-tmv" firstAttribute="top" secondItem="eZh-eR-uSK" secondAttribute="top" id="dpy-ST-j6b"/>
                                             <constraint firstAttribute="height" constant="60" id="eku-6r-cyk"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZsN-Dj-Vmj" secondAttribute="trailing" id="kkJ-Mg-sJv"/>
                                             <constraint firstAttribute="bottom" secondItem="3zY-x2-tmv" secondAttribute="bottom" id="yJL-0S-BAA"/>
                                         </constraints>
                                     </view>
@@ -4043,7 +4028,6 @@ Cg
                         <outlet property="carrierNameLabel" destination="bzM-0p-yMN" id="BpB-QL-G7P"/>
                         <outlet property="packageDescriptionLabel" destination="OBP-SJ-0oz" id="FGf-Eg-fyQ"/>
                         <outlet property="startTrackingButton" destination="9lb-x0-LSf" id="7Im-0W-a0J"/>
-                        <outlet property="trackingNumberLabel" destination="ZsN-Dj-Vmj" id="vVw-Vh-gQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8MS-qv-91b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4052,7 +4036,7 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hdw-E8-kwq"/>
+        <segue reference="ZfS-Ae-A1v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>

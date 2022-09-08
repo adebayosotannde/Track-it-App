@@ -597,7 +597,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Track it Package Tracker/Track it Package Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.03;
+				CURRENT_PROJECT_VERSION = 3.1;
 				DEVELOPMENT_TEAM = 4G4YKXJ9A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Track it Package Tracker/Info.plist";
@@ -612,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.03;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -628,7 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Track it Package Tracker/Track it Package Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.03;
+				CURRENT_PROJECT_VERSION = 3.1;
 				DEVELOPMENT_TEAM = 4G4YKXJ9A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Track it Package Tracker/Info.plist";
@@ -643,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.03;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
