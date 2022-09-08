@@ -57,12 +57,7 @@ extension AddTrakingNumberViewController
             self.navigationController?.popViewController(animated: true)
         }))
 
-        alert.addAction(UIAlertAction(title: "Go toi hell", style: .destructive, handler:
-        { UIAlertAction in
-            self.dismiss(animated: true, completion: nil)
-            self.navigationController?.popViewController(animated: true)
-        }))
-
+       
        self.present(alert, animated: true, completion: nil)//Displays the Alert Box
     }
     

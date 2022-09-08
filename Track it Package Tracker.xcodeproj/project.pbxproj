@@ -66,6 +66,7 @@
 		EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeMenuViewController Side Menu .swift"; sourceTree = "<group>"; };
 		EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackingNumberViewController.swift; sourceTree = "<group>"; };
 		EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edit Data and Function.swift"; sourceTree = "<group>"; };
+		EE19AAF028C970F10094E8FE /* simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; path = "../../../../var/folders/cb/w9zdlvl566j7l7wlbs8t2zp40000gn/T/simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; sourceTree = "<group>"; };
 		EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
 		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -135,6 +136,14 @@
 			path = "Edit Tracking Number VC";
 			sourceTree = "<group>";
 		};
+		EE19AAEF28C970F10094E8FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE19AAF028C970F10094E8FE /* simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE56B53328B5912D00676F48 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +208,7 @@
 			children = (
 				EEFC571F2898B37500EF13F4 /* Track it Package Tracker */,
 				EEFC571E2898B37500EF13F4 /* Products */,
+				EE19AAEF28C970F10094E8FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -587,7 +597,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Track it Package Tracker/Track it Package Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.02;
+				CURRENT_PROJECT_VERSION = 2.03;
 				DEVELOPMENT_TEAM = 4G4YKXJ9A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Track it Package Tracker/Info.plist";
@@ -602,8 +612,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.02;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It";
+				MARKETING_VERSION = 2.03;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -618,7 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Track it Package Tracker/Track it Package Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.02;
+				CURRENT_PROJECT_VERSION = 2.03;
 				DEVELOPMENT_TEAM = 4G4YKXJ9A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Track it Package Tracker/Info.plist";
@@ -633,8 +643,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.02;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It";
+				MARKETING_VERSION = 2.03;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
