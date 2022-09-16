@@ -35,6 +35,9 @@
 		EEAF767C28B024EF00CA9FA0 /* PackageStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */; };
 		EEAF767E28B03B4E00CA9FA0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */; };
 		EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC9FA8928A5F706009D6848 /* PackageViewController.swift */; };
+		EEDB835828C992350011133D /* Login - LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB835728C992350011133D /* Login - LifeCycle.swift */; };
+		EEDB835B28C9937E0011133D /* Login - User Authentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB835A28C9937E0011133D /* Login - User Authentification.swift */; };
+		EEDB835D28C994240011133D /* Login - UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB835C28C994240011133D /* Login - UITextField.swift */; };
 		EEE4B2DE289B601500650185 /* AddTrakingNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */; };
 		EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */; };
 		EEE4B2E2289B611E00650185 /* StringValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2E1289B611E00650185 /* StringValues.swift */; };
@@ -83,6 +86,9 @@
 		EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageStatus.swift; sourceTree = "<group>"; };
 		EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EEC9FA8928A5F706009D6848 /* PackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewController.swift; sourceTree = "<group>"; };
+		EEDB835728C992350011133D /* Login - LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login - LifeCycle.swift"; sourceTree = "<group>"; };
+		EEDB835A28C9937E0011133D /* Login - User Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login - User Authentification.swift"; sourceTree = "<group>"; };
+		EEDB835C28C994240011133D /* Login - UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login - UITextField.swift"; sourceTree = "<group>"; };
 		EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrakingNumberViewController.swift; sourceTree = "<group>"; };
 		EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewContoller.swift; sourceTree = "<group>"; };
 		EEE4B2E1289B611E00650185 /* StringValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValues.swift; sourceTree = "<group>"; };
@@ -182,6 +188,17 @@
 				EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */,
 			);
 			path = SideMenuTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEDB835928C9927D0011133D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */,
+				EEDB835C28C994240011133D /* Login - UITextField.swift */,
+				EEDB835A28C9937E0011133D /* Login - User Authentification.swift */,
+				EEDB835728C992350011133D /* Login - LifeCycle.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		EEE4B2E3289B612F00650185 /* Strings */ = {
@@ -317,7 +334,7 @@
 		EEFC5761289AF78100EF13F4 /* Authentification */ = {
 			isa = PBXGroup;
 			children = (
-				EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */,
+				EEDB835928C9927D0011133D /* Login */,
 				EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */,
 				EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */,
 			);
@@ -423,6 +440,8 @@
 				EEAF767E28B03B4E00CA9FA0 /* MainViewController.swift in Sources */,
 				EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */,
 				EEE4B2E5289B614D00650185 /* AppUtility.swift in Sources */,
+				EEDB835B28C9937E0011133D /* Login - User Authentification.swift in Sources */,
+				EEDB835D28C994240011133D /* Login - UITextField.swift in Sources */,
 				EEFC575C2899B6E500EF13F4 /* LoginViewController.swift in Sources */,
 				EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */,
 				EE56B53828B5B8DE00676F48 /* GoShippoRequest.swift in Sources */,
@@ -439,6 +458,7 @@
 				EEE4B2EA289B86E300650185 /* Extension UIViewController.swift in Sources */,
 				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
 				EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */,
+				EEDB835828C992350011133D /* Login - LifeCycle.swift in Sources */,
 				EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */,
 				EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */,
 				EE56B53528B5915200676F48 /* Add - Data Manager Functions.swift in Sources */,

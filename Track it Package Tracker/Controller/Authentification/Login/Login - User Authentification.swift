@@ -1,65 +1,18 @@
 //
-//  LoginViewController.swift
+//  Login - User Authentification.swift
 //  Track it Package Tracker
 //
-//  Created by Adebayo Sotannde on 8/2/22.
+//  Created by Adebayo Sotannde on 9/7/22.
 //
 
-import UIKit
+import Foundation
 import Firebase
 import GoogleSignIn
 import AuthenticationServices
 import CryptoKit
 
 
-
-
-//MARK: - LifeCycle Functions
-extension LoginViewController
-{
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        setupTextFieldDelgate()
-        setupSignInWithAppleButton()
-    }
-    
-    override func viewWillAppear(_ animated: Bool)
-    {
-        //Hides the back button before the view appears.
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-       
-    }
-    
-    override func viewWillDisappear(_ animated: Bool)
-    {
-        super.viewDidDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-}
-
-class LoginViewController:UIViewController
-{
-    var currentNonce:String? //Used for Apple Sign in
-    
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    @IBOutlet weak var appleSignon: UIStackView!
-    
-    @IBAction func signInButtonPressed(_ sender: UIButton)
-    {
-        LoginUser()
-    }
-    
-    @IBAction func signInGoogle(_ sender: UIButton)
-    {
-        initiateGoogleSignOn()
-    }
-}
-
-//MARK: - Sign up
+//MARK: - Authentification
 extension LoginViewController
 {
     func LoginUser()
@@ -87,36 +40,10 @@ extension LoginViewController
             }
         }
     }
-}
-
-//MARK: - UITextField
-extension LoginViewController: UITextFieldDelegate
-{
-    func setupTextFieldDelgate()
-    {
-        self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
-    }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-    {
-        
-        switch textField
-        {
-           case self.emailTextField:
-               self.passwordTextField.becomeFirstResponder()
-           default:
-            self.view.endEditing(true)
-            LoginUser()
-            
-           }
-            return false
-        }
-}
-
-//MARK: - Google Sign
-extension LoginViewController
-{
+    /*
+     Google sign in 
+     */
     func initiateGoogleSignOn()
     {
         
@@ -163,10 +90,12 @@ extension LoginViewController
     }
 }
 
+
+
 //MARK: - Apple Sign On
 extension LoginViewController
 {
-    private func setupSignInWithAppleButton()
+     func setupSignInWithAppleButton()
     {
         let signInWithAppleButton = ASAuthorizationAppleIDButton()
         appleSignon.addArrangedSubview(signInWithAppleButton)
@@ -296,5 +225,3 @@ extension LoginViewController: ASAuthorizationControllerDelegate,  ASAuthorizati
         return self.view.window!
     }
 }
-
-
