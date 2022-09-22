@@ -4,7 +4,8 @@ import Foundation
 // MARK: - Package
 struct Package: Codable
 {
-    let trackingNumber, carrier: String
+    let trackingNumber: String
+    let carrier: String
     let servicelevel: Servicelevel?
     let trackingHistory: [Tracking]?
 

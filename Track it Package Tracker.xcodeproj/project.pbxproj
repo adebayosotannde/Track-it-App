@@ -19,6 +19,10 @@
 		EE19AAE928C91AB60094E8FE /* HomeMenuViewController Side Menu .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */; };
 		EE19AAEB28C9594E0094E8FE /* EditTrackingNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */; };
 		EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */; };
+		EE20FC2A28DD120F0041C2FC /* EndUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE20FC2928DD120F0041C2FC /* EndUserVC.swift */; };
+		EE20FC2C28DD1C030041C2FC /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE20FC2B28DD1C030041C2FC /* WebViewViewController.swift */; };
+		EE20FC2E28DD1C090041C2FC /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE20FC2D28DD1C090041C2FC /* WebViewViewController.swift */; };
+		EE35802E28D7FC5E00EF9244 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35802D28D7FC5E00EF9244 /* SideMenuVC.swift */; };
 		EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */; };
 		EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */; };
 		EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52F28B58F1800676F48 /* CoreDataManager.swift */; };
@@ -32,7 +36,6 @@
 		EEAF767628B01ABC00CA9FA0 /* Carriers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767528B01ABC00CA9FA0 /* Carriers.swift */; };
 		EEAF767828B01E4800CA9FA0 /* carriers.json in Resources */ = {isa = PBXBuildFile; fileRef = EEAF767728B01E4800CA9FA0 /* carriers.json */; };
 		EEAF767A28B01F6F00CA9FA0 /* SelectCarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */; };
-		EEAF767C28B024EF00CA9FA0 /* PackageStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */; };
 		EEAF767E28B03B4E00CA9FA0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */; };
 		EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC9FA8928A5F706009D6848 /* PackageViewController.swift */; };
 		EEDB835828C992350011133D /* Login - LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB835728C992350011133D /* Login - LifeCycle.swift */; };
@@ -70,6 +73,10 @@
 		EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackingNumberViewController.swift; sourceTree = "<group>"; };
 		EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edit Data and Function.swift"; sourceTree = "<group>"; };
 		EE19AAF028C970F10094E8FE /* simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; path = "../../../../var/folders/cb/w9zdlvl566j7l7wlbs8t2zp40000gn/T/simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; sourceTree = "<group>"; };
+		EE20FC2928DD120F0041C2FC /* EndUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndUserVC.swift; sourceTree = "<group>"; };
+		EE20FC2B28DD1C030041C2FC /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewViewController.swift; path = "../../../../Library/Developer/Xcode/DerivedData/Track_it_Package_Tracker-aizttwfxqnftnbakmfptrbyjkcrm/SourcePackages/checkouts/nanopb/WebViewViewController.swift"; sourceTree = "<group>"; };
+		EE20FC2D28DD1C090041C2FC /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		EE35802D28D7FC5E00EF9244 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
 		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -83,7 +90,6 @@
 		EEAF767528B01ABC00CA9FA0 /* Carriers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carriers.swift; sourceTree = "<group>"; };
 		EEAF767728B01E4800CA9FA0 /* carriers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carriers.json; sourceTree = "<group>"; };
 		EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarrierViewController.swift; sourceTree = "<group>"; };
-		EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageStatus.swift; sourceTree = "<group>"; };
 		EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EEC9FA8928A5F706009D6848 /* PackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewController.swift; sourceTree = "<group>"; };
 		EEDB835728C992350011133D /* Login - LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login - LifeCycle.swift"; sourceTree = "<group>"; };
@@ -150,6 +156,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE20FC2728DCFA3D0041C2FC /* DataObject */ = {
+			isa = PBXGroup;
+			children = (
+				EEFFD49628C71515008C4267 /* DataObjectManager.swift */,
+			);
+			path = DataObject;
+			sourceTree = "<group>";
+		};
+		EE20FC2828DD0FE10041C2FC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */,
+				EEDB835C28C994240011133D /* Login - UITextField.swift */,
+				EEDB835A28C9937E0011133D /* Login - User Authentification.swift */,
+				EEDB835728C992350011133D /* Login - LifeCycle.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		EE56B53328B5912D00676F48 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,10 +218,7 @@
 		EEDB835928C9927D0011133D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */,
-				EEDB835C28C994240011133D /* Login - UITextField.swift */,
-				EEDB835A28C9937E0011133D /* Login - User Authentification.swift */,
-				EEDB835728C992350011133D /* Login - LifeCycle.swift */,
+				EE20FC2828DD0FE10041C2FC /* Login */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -223,6 +245,7 @@
 		EEFC57142898B37500EF13F4 = {
 			isa = PBXGroup;
 			children = (
+				EE20FC2B28DD1C030041C2FC /* WebViewViewController.swift */,
 				EEFC571F2898B37500EF13F4 /* Track it Package Tracker */,
 				EEFC571E2898B37500EF13F4 /* Products */,
 				EE19AAEF28C970F10094E8FE /* Frameworks */,
@@ -305,6 +328,7 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EE35802D28D7FC5E00EF9244 /* SideMenuVC.swift */,
 				EE19AAEE28C969870094E8FE /* Edit Tracking Number VC */,
 				EE56B53628B5A6C900676F48 /* Add */,
 				EE56B53328B5912D00676F48 /* Home */,
@@ -317,12 +341,11 @@
 		EEFC574D2899874C00EF13F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE20FC2728DCFA3D0041C2FC /* DataObject */,
 				EE56B53728B5B8DE00676F48 /* GoShippoRequest.swift */,
-				EEFFD49628C71515008C4267 /* DataObjectManager.swift */,
 				EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */,
 				EEAF767528B01ABC00CA9FA0 /* Carriers.swift */,
 				EE56B53128B58F6100676F48 /* NetWorkManager.swift */,
-				EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */,
 				EE56B52F28B58F1800676F48 /* CoreDataManager.swift */,
 				EEAF767728B01E4800CA9FA0 /* carriers.json */,
 				EEE4B2E6289B615300650185 /* Extensions and AppUtility */,
@@ -336,6 +359,8 @@
 			children = (
 				EEDB835928C9927D0011133D /* Login */,
 				EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */,
+				EE20FC2928DD120F0041C2FC /* EndUserVC.swift */,
+				EE20FC2D28DD1C090041C2FC /* WebViewViewController.swift */,
 				EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */,
 			);
 			path = Authentification;
@@ -435,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE4B2DE289B601500650185 /* AddTrakingNumberViewController.swift in Sources */,
+				EE20FC2A28DD120F0041C2FC /* EndUserVC.swift in Sources */,
 				EE19AAEB28C9594E0094E8FE /* EditTrackingNumberViewController.swift in Sources */,
 				EEFFD49728C71515008C4267 /* DataObjectManager.swift in Sources */,
 				EEAF767E28B03B4E00CA9FA0 /* MainViewController.swift in Sources */,
@@ -446,6 +472,7 @@
 				EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */,
 				EE56B53828B5B8DE00676F48 /* GoShippoRequest.swift in Sources */,
 				EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */,
+				EE35802E28D7FC5E00EF9244 /* SideMenuVC.swift in Sources */,
 				EEFC575E289AF76D00EF13F4 /* SignupViewController.swift in Sources */,
 				EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */,
 				EEE4B2E8289B85FD00650185 /* Extension UIView.swift in Sources */,
@@ -462,14 +489,15 @@
 				EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */,
 				EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */,
 				EE56B53528B5915200676F48 /* Add - Data Manager Functions.swift in Sources */,
+				EE20FC2E28DD1C090041C2FC /* WebViewViewController.swift in Sources */,
 				EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */,
 				EEAF767A28B01F6F00CA9FA0 /* SelectCarrierViewController.swift in Sources */,
 				EE19AAE928C91AB60094E8FE /* HomeMenuViewController Side Menu .swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
+				EE20FC2C28DD1C030041C2FC /* WebViewViewController.swift in Sources */,
 				EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */,
 				EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */,
 				EE5829FD289EDE220073FDB7 /* HomeMenuViewController.swift in Sources */,
-				EEAF767C28B024EF00CA9FA0 /* PackageStatus.swift in Sources */,
 				EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +656,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,6 +688,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

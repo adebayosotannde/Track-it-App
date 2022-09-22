@@ -17,6 +17,8 @@ extension LoginViewController
 {
     func LoginUser()
     {
+        attmeptsToLogin += 1
+        
         if let email = emailTextField.text, let password = passwordTextField.text
         {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -29,6 +31,16 @@ extension LoginViewController
                     { UIAlertAction in
                         
                     }))
+                    
+                    if self.attmeptsToLogin > 1
+                    {
+                        alert.addAction(UIAlertAction(title: "Reset Password", style: .default, handler:
+                        { UIAlertAction in
+                            
+                            self.performSegue(withIdentifier: "ResetPassword", sender: nil)
+                        }))
+                    }
+                    
                     self.present(alert, animated: true, completion: nil)//Displays the Alert Box
                 }
                 else

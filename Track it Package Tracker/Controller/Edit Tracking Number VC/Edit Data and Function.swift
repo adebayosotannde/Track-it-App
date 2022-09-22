@@ -55,18 +55,17 @@ extension EditTrackingNumberViewController
        
 
         //Set Package properties
-        passedPackage!.trackingNumber = trackingNumberLabel.text!
-        passedPackage!.descriptionOfPackage = packageDescriptionLabel.text
-        passedPackage!.packageCarrierCode = carrierCode
-        passedPackage!.carrierName = carrierName
+        passedPackage.trackingNumber = trackingNumberLabel.text!
+        passedPackage.descriptionOfPackage = packageDescriptionLabel.text
+     
         
-        passedPackage!.circleIndicatorColor = StringLiteral.redColor
-        passedPackage!.currentDescription =  StringLiteral.defaultDescription
-        passedPackage?.delivered = false
+        passedPackage.circleIndicatorColor = StringLiteral.redColor
+        passedPackage.currentDescription =  StringLiteral.defaultDescription
+       passedPackage.delivered = false
         
         
         CoreDataManager.sharedManager.save()//Cause the
-        NetWorkManager.sharedManager.requestData(packageDetail: passedPackage!)
+        NetWorkManager.sharedManager.requestData(packageDetail: passedPackage)
     }
     
     func dismissViewController()

@@ -35,7 +35,7 @@ class PackageViewController: UIViewController
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem)
     {
         navigationController?.popViewController(animated: true)
-        print("Hello")
+       
     }
     
     @IBAction func editButtonPressed(_ sender: Any)
@@ -51,7 +51,7 @@ class PackageViewController: UIViewController
             //Handle Edit Shipement Action
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let editBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "EditTrackingNumberViewController") as! EditTrackingNumberViewController
-            editBarcodeViewController.passedPackage = self.passedPackage
+            editBarcodeViewController.passedPackage = self.passedPackage!
             
             self.navigationController?.pushViewController(editBarcodeViewController, animated: true)
         }
@@ -166,7 +166,7 @@ extension PackageViewController
     func setMapViewLocation()
     {
         var address = passedPackage?.lastLocation
-        print("LAst Location \(address)")
+       
         let geocoder = CLGeocoder()
         
         if address == nil
@@ -334,7 +334,7 @@ extension PackageViewController: UITableViewDataSource
         }
         
         let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPackage?.testData)!)
-        print(trackingData)
+       
         let count = (trackingData?.trackingHistory!.count)! - 1
         
         
@@ -344,7 +344,7 @@ extension PackageViewController: UITableViewDataSource
             return 0
         }
     
-        print("Coiunt is \(count)")
+  
         return count
     }
 
@@ -357,7 +357,7 @@ extension PackageViewController: UITableViewDataSource
         //Set Data Here
         let data: DataObjectManager = DataObjectManager(package: passedPackage!)
         cell.descriptionLabel.text = data.getDescriptionLabelForCell(indexPath: indexPath)
-        cell.locationLabel.text = data.getLocationLabelForCel(indexPath: indexPath)
+        cell.locationLabel.text = data.getFullLocationForCel(indexPath: indexPath)
         cell.dateLabel.text = data.getDateForCell(indexPath: indexPath)
         cell.timeLabel.text = data.getTimeForCell(indexPath: indexPath)
     

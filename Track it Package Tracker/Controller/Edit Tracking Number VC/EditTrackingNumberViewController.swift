@@ -14,22 +14,26 @@ extension EditTrackingNumberViewController
     override func viewDidLoad()
     {
 
-        registerNotificationCenter()
-        barcodeButton.blink()
-        self.carrierNameLabel.delegate = self
+        registerNotificationCenter() //Registers the notification center
+        barcodeButton.blink() //Barcode Scanner Button Blink
+        self.carrierNameLabel.delegate = self //Delgate for the carriernamelable. Used to detect changes in the text field.
+        
+        populateViewFromPackageObject()//Populates the textbox and images from the passedPackage Object. 
        
         
-        
-        setUpEditTrackingNumberViewController()
+        //carrierCode = (passedPackage.packageCarrierCode)! //sets carrier Code to the
+       
+  
    
     }
     
-    func setUpEditTrackingNumberViewController()
+    func populateViewFromPackageObject()
     {
-        trackingNumberLabel.text = passedPackage?.trackingNumber
-        carrierNameLabel.text = passedPackage?.carrierName
-        packageDescriptionLabel.text = passedPackage?.descriptionOfPackage
-        carrierImage.image = UIImage(named: (passedPackage?.packageCarrierCode)!)
+      trackingNumberLabel.text = passedPackage.trackingNumber
+   
+        carrierNameLabel.text = passedPackage.carrierName
+        packageDescriptionLabel.text = passedPackage.descriptionOfPackage
+        carrierImage.image = UIImage(named: (passedPackage.packageCarrierCode)!)
         
     }
 
@@ -61,12 +65,16 @@ extension EditTrackingNumberViewController
 class EditTrackingNumberViewController: UIViewController
 {
     //MARK: - Variables and Constants
-    var passedPackage:PackageObject?
-    var indexPassed = 0
+    var passedPackage:PackageObject = PackageObject()
+    
     var pacakges = [PackageObject]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var launchBarcodeViewController = false
+    
+    
+
+    
     
     @IBAction func buttonTracking(_ sender: Any)
     {
@@ -74,11 +82,6 @@ class EditTrackingNumberViewController: UIViewController
        
         textFieldCheck()
     }
-    //Package Details
-    var carrierCode: String = ""
-    var carrierName: String = ""
-    var trackingNumber: String = ""
-    var packageDescription: String = ""
     
     
     
@@ -138,7 +141,8 @@ extension EditTrackingNumberViewController
           if let carrier = dict[StringLiteral.postCarrierName] as? String
         {
            carrierNameLabel.text = carrier
-              carrierName = carrier
+              passedPackage.carrierName = carrier
+              //carrierName = carrier
               textFieldCheck()
             
         }
@@ -147,7 +151,8 @@ extension EditTrackingNumberViewController
            
               carrierImage.image = UIImage(named: carrierCode.lowercased())
               //Update the carrier Code Variable
-              self.carrierCode = carrierCode
+              passedPackage.packageCarrierCode = carrierCode
+                //carrierCode = carrierCode
         }
           if let barcode = dict[StringLiteral.barcodeScannedNotification] as? String
         {
@@ -163,12 +168,7 @@ extension EditTrackingNumberViewController: UITextFieldDelegate
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SelectCarrierViewController") as! SelectCarrierViewController
-//        navigationController?.pushViewController(newViewController, animated: true)
-//           return false
 
-//        performSegue(withIdentifier: "mySegueID", sender: nil)
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                let newViewController = storyBoard.instantiateViewController(withIdentifier: "SelectCarrierViewController") as! SelectCarrierViewController

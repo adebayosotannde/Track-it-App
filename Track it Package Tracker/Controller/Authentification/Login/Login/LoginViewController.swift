@@ -15,6 +15,7 @@ import Firebase
 
 class LoginViewController:UIViewController
 {
+    var attmeptsToLogin = 0
     var currentNonce:String? //Used for Apple Sign in
     @IBOutlet weak var appleSignon: UIStackView!
     

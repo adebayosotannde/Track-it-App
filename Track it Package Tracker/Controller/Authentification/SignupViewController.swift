@@ -44,6 +44,10 @@ class SignupViewController: UIViewController
         SignUserUp()
     }
 
+    @IBAction func privacyPolicyButtonPressed(_ sender: Any)
+    {
+        
+    }
     @IBAction func signInGoogle(_ sender: GIDSignInButton)
     {
         initiateGoogleSignOn()
