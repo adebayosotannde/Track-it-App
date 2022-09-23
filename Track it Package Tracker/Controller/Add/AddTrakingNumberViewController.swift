@@ -8,6 +8,7 @@
 import UIKit
 import Contacts
 import CoreData
+import Lottie
 
 extension AddTrakingNumberViewController
 {
@@ -15,11 +16,12 @@ extension AddTrakingNumberViewController
     {
 
         registerNotificationCenter()
-        barcodeButton.blink()
         self.carrierNameLabel.delegate = self
         disableButton()
+        
     }
 
+    
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
@@ -29,6 +31,10 @@ extension AddTrakingNumberViewController
             self.performSegue(withIdentifier: StringLiteral.barcodeScanner, sender: self)
             launchBarcodeViewController = false
         }
+        
+        //Start Lotti animation
+        animationView.loopMode = .loop
+        animationView.play()
     }
     
     
@@ -47,6 +53,9 @@ extension AddTrakingNumberViewController
 
 class AddTrakingNumberViewController: UIViewController
 {
+    @IBOutlet weak var animationView: AnimationView!
+    
+    
     var pacakges = [PackageObject]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -72,7 +81,7 @@ class AddTrakingNumberViewController: UIViewController
     @IBOutlet weak var startTrackingButton: UIButton!
     @IBOutlet weak var carrierImage: UIImageView!
     //UITextFileds
-    @IBOutlet weak var barcodeButton: UIButton!
+  
     @IBOutlet weak var carrierNameLabel: UITextField!
     
     @IBOutlet weak var packageDescriptionLabel: UITextField!
@@ -86,10 +95,7 @@ class AddTrakingNumberViewController: UIViewController
        
        
     }
-    @IBAction func barcodeButtonPressed(_ sender: UIButton)
-    {
-        print("Barcode Button Pressed")
-    }
+  
 }
 
 //MARK: - Notification Canter

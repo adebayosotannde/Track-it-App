@@ -15,7 +15,7 @@ extension EditTrackingNumberViewController
     {
 
         registerNotificationCenter() //Registers the notification center
-        barcodeButton.blink() //Barcode Scanner Button Blink
+       
         self.carrierNameLabel.delegate = self //Delgate for the carriernamelable. Used to detect changes in the text field.
         
         populateViewFromPackageObject()//Populates the textbox and images from the passedPackage Object. 
@@ -92,7 +92,7 @@ class EditTrackingNumberViewController: UIViewController
     @IBOutlet weak var startTrackingButton: UIButton!
     @IBOutlet weak var carrierImage: UIImageView!
     //UITextFileds
-    @IBOutlet weak var barcodeButton: UIButton!
+   
     @IBOutlet weak var carrierNameLabel: UITextField!
     
     @IBOutlet weak var packageDescriptionLabel: UITextField!
@@ -107,10 +107,7 @@ class EditTrackingNumberViewController: UIViewController
        
        
     }
-    @IBAction func barcodeButtonPressed(_ sender: UIButton)
-    {
-        print("Barcode Button Pressed")
-    }
+   
     
     
 }

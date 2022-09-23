@@ -14,7 +14,25 @@ extension ForgetPasswordViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.dismissKeyboard()
+        setupTextFieldDelgate()
+        animateTitle()
     }
+    
+    private func animateTitle()
+    {
+        titleLabel.text = ""
+        var charIndex = 0.0
+        let titleText = StringLiteral.appName
+        for letter in titleText
+        {
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
+    }
+    
     
     @IBAction func exitButtonPressed(_ sender: Any)
     {
@@ -24,10 +42,16 @@ extension ForgetPasswordViewController
 class ForgetPasswordViewController: UIViewController
 {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var emailValidationTextbox: UILabel!
     @IBAction func resetButtonPressed(_ sender: Any)
+    {
+        resetPassword()
+    }
+    
+    private func resetPassword()
     {
         if isValidEmailAddress(emailAddressString: emailTextField.text!)
         {
@@ -48,7 +72,6 @@ class ForgetPasswordViewController: UIViewController
         }
        
     }
-    
     private func displayAlert()
     {
         let alert = UIAlertController(title: "Reset Link Sent", message: "An email link haas been sent to your email.", preferredStyle: UIAlertController.Style.alert)
@@ -86,3 +109,28 @@ class ForgetPasswordViewController: UIViewController
   }
     
 }
+
+//MARK: - UITextField
+extension ForgetPasswordViewController: UITextFieldDelegate
+{
+    func setupTextFieldDelgate()
+    {
+        self.emailTextField.delegate = self
+        }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        
+        switch textField
+        {
+           case self.emailTextField:
+               resetPassword()
+           default:
+            self.view.endEditing(true)
+           
+            
+           }
+            return false
+        }
+}
+

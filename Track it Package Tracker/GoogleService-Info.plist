@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>154549844820-brem3d62stdp4o4l15tq34idbirktk66.apps.googleusercontent.com</string>
+	<string>154549844820-rciap7gkma3a64l7ptm06nril8nugcmn.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.154549844820-brem3d62stdp4o4l15tq34idbirktk66</string>
+	<string>com.googleusercontent.apps.154549844820-rciap7gkma3a64l7ptm06nril8nugcmn</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBso_-ZFos61k7irl5xLQW0b4YZKfuy7oo</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.AdebayoSotannde.TrackIt.Track-It</string>
+	<string>com.AdebayoSotannde.TrackIt.Track-It2</string>
 	<key>PROJECT_ID</key>
 	<string>track-it-216eb</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:154549844820:ios:a7d0dd3a8d1317a5c526c1</string>
+	<string>1:154549844820:ios:e44c54be0dc0a9c5c526c1</string>
 	<key>DATABASE_URL</key>
 	<string>https://track-it-216eb-default-rtdb.firebaseio.com</string>
 </dict>

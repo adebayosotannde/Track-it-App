@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 extension HomeMenuViewController
 {
@@ -25,8 +26,20 @@ extension HomeMenuViewController
         //Setup for Side Menu
         setupSideMenu()
         
+        
+        
        
        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //setup animation view
+        animationView.loopMode = .loop
+        animationView.play()
+        animationView.backgroundColor = .clear
+        
+        
     }
     
    
@@ -40,6 +53,7 @@ extension HomeMenuViewController
 class HomeMenuViewController: UIViewController
 {
     
+    @IBOutlet weak var animationView: AnimationView!
     var packages = [PackageObject]() //Pacakge Object Array
     
     

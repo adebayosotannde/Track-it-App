@@ -15,6 +15,24 @@ extension LoginViewController
     {
         super.viewDidLoad()
         setupVC() //Setup the View Controller
+        self.dismissKeyboard()
+        
+        animateTitle()
+        
+    }
+    
+    func animateTitle()
+    {
+        titleLabel.text = ""
+        var charIndex = 0.0
+        let titleText = StringLiteral.appName
+        for letter in titleText
+        {
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
     }
     
     override func viewWillAppear(_ animated: Bool)

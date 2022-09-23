@@ -15,10 +15,7 @@ class NetWorkManager
 
     func requestData(packageDetail: PackageObject)
     {
-        
-       
         GoShippoRequest(package: packageDetail) //Quiery the UPS API Against the tracking Number
-        
     }
 }
 

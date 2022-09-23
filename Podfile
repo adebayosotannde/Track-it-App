@@ -7,4 +7,6 @@ target 'Track it Package Tracker' do
 
   # Pods for Track it Package Tracker
 
+pod 'lottie-ios'
+
 end

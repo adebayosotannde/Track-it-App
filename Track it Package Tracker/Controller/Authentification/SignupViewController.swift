@@ -21,6 +21,22 @@ extension SignupViewController
         super.viewDidLoad()
         setupTextFieldDelgate()
         setupSignInWithAppleButton()
+        self.dismissKeyboard()
+        animateTitle()
+    }
+    
+    private func animateTitle()
+    {
+        titleLabel.text = ""
+        var charIndex = 0.0
+        let titleText = StringLiteral.appName
+        for letter in titleText
+        {
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
     }
     
     @IBAction func exitButtonPressedn(_ sender: Any)
@@ -33,6 +49,7 @@ class SignupViewController: UIViewController
 {
     var currentNonce:String? //Used for Apple Sign in
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var verifyPasswordTextField: UITextField!
@@ -74,6 +91,8 @@ extension SignupViewController: UITextFieldDelegate
                self.passwordTextField.becomeFirstResponder()
         case self.passwordTextField:
             self.verifyPasswordTextField.becomeFirstResponder()
+        case self.verifyPasswordTextField:
+            SignUserUp()
            default:
             self.view.endEditing(true)
            }
@@ -119,9 +138,15 @@ extension SignupViewController
                         
                     }else
                     {
+                        
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeMenuViewController") as! HomeMenuViewController
                         self.navigationController?.pushViewController(newViewController, animated: true)
+                        
+                        
+                       
+                       
+                     
                     }
                 }
                 

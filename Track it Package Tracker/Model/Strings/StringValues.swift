@@ -8,6 +8,7 @@
 struct StringLiteral
 {
     //App Name
+    static let appName = "Track it!"
     static let homeViewControllerTitleName = "Home"
     
     //Notification Keys
