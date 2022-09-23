@@ -46,7 +46,9 @@ class SignupViewController: UIViewController
 
     @IBAction func privacyPolicyButtonPressed(_ sender: Any)
     {
-        
+        if let url = URL(string: "https://www.adebayosotannde.com/track-it/track-it-privacy-policy") {
+            UIApplication.shared.open(url)
+        }
     }
     @IBAction func signInGoogle(_ sender: GIDSignInButton)
     {
