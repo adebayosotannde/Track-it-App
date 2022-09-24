@@ -16,41 +16,39 @@ extension HomeMenuViewController
         //UIVIEW
   
        
-        updateAccountButton()
-        updateWelcomeText()
-        currentVersion.setTitle("v "  + "\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)", for: .normal) //Gets the current version
+//        updateAccountButton()
+//        if Auth.auth().currentUser != nil
+//        {
+//            accountStatusButton.setTitle("Sign Out", for: .normal)
+//        } else
+//        {
+//           //User Not logged in
+//            accountStatusButton.setTitle("Log in / Sign up", for: .normal)
+//
+//        }
+       
+        
+        
+//
+//        updateWelcomeText()
+//        if Auth.auth().currentUser != nil
+//        {
+//            welcomeTExt.text = Auth.auth().currentUser?.email?.description
+//
+//        } else
+//        {
+//           //User Not logged in
+//            welcomeTExt.text = "Welcome"
+//
+//        }
+        //currentVersion.setTitle("v "  + "\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)", for: .normal) //Gets the current version
         
        
     }
     
-    func updateAccountButton()
-    {
-        //-if signed in change Log in/ sign up to ---> Sign out
-        
-        if Auth.auth().currentUser != nil
-        {
-            accountStatusButton.setTitle("Sign Out", for: .normal)
-        } else
-        {
-           //User Not logged in
-            accountStatusButton.setTitle("Log in / Sign up", for: .normal)
-
-        }
-    }
+  
     
-    func  updateWelcomeText()
-    {
-        if Auth.auth().currentUser != nil
-        {
-            welcomeTExt.text = Auth.auth().currentUser?.email?.description
-        
-        } else
-        {
-           //User Not logged in
-            welcomeTExt.text = "Welcome"
-
-        }
-    }
+    
     
     func loginOrSignout()
     {

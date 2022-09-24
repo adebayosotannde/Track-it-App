@@ -18,7 +18,9 @@ extension AddTrakingNumberViewController
         registerNotificationCenter()
         self.carrierNameLabel.delegate = self
         disableButton()
+        trackingNumberLabel.becomeFirstResponder()// Displays keyboard and make this the first responder
         
+    
     }
 
     

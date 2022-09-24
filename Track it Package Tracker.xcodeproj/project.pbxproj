@@ -19,8 +19,7 @@
 		EE19AAE928C91AB60094E8FE /* HomeMenuViewController Side Menu .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */; };
 		EE19AAEB28C9594E0094E8FE /* EditTrackingNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */; };
 		EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */; };
-		EE35802E28D7FC5E00EF9244 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35802D28D7FC5E00EF9244 /* SideMenuVC.swift */; };
-		EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */; };
+		EE35802E28D7FC5E00EF9244 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */; };
 		EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */; };
 		EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52F28B58F1800676F48 /* CoreDataManager.swift */; };
 		EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53128B58F6100676F48 /* NetWorkManager.swift */; };
@@ -29,7 +28,6 @@
 		EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */; };
 		EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */; };
 		EE5829FD289EDE220073FDB7 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */; };
-		EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */; };
 		EE8B2CAB28DE3022002220F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CAA28DE3022002220F3 /* GoogleService-Info.plist */; };
 		EE8B2CB028DE34BD002220F3 /* addshipment.json in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CAF28DE34BD002220F3 /* addshipment.json */; };
 		EE8B2CB228DE4B13002220F3 /* getStarted.json in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CB128DE4B13002220F3 /* getStarted.json */; };
@@ -74,8 +72,7 @@
 		EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackingNumberViewController.swift; sourceTree = "<group>"; };
 		EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edit Data and Function.swift"; sourceTree = "<group>"; };
 		EE19AAF028C970F10094E8FE /* simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; path = "../../../../var/folders/cb/w9zdlvl566j7l7wlbs8t2zp40000gn/T/simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; sourceTree = "<group>"; };
-		EE35802D28D7FC5E00EF9244 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
-		EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
 		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		EE56B53128B58F6100676F48 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 		EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOSHIPPOJSONDATA.swift; sourceTree = "<group>"; };
 		EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptions.swift; sourceTree = "<group>"; };
 		EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewController.swift; sourceTree = "<group>"; };
-		EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		EE8B2CAA28DE3022002220F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE8B2CAF28DE34BD002220F3 /* addshipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addshipment.json; sourceTree = "<group>"; };
 		EE8B2CB128DE4B13002220F3 /* getStarted.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getStarted.json; sourceTree = "<group>"; };
@@ -248,15 +244,6 @@
 			path = "Home Alternatives";
 			sourceTree = "<group>";
 		};
-		EEB2B19128A6C3B700EBFF5C /* SideMenuTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */,
-				EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */,
-			);
-			path = SideMenuTableViewCell;
-			sourceTree = "<group>";
-		};
 		EEDB835928C9927D0011133D /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +339,6 @@
 		EEFC57482899780300EF13F4 /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				EEB2B19128A6C3B700EBFF5C /* SideMenuTableViewCell */,
 				EEFC5745289977F500EF13F4 /* ActivityTableViewCell */,
 				EEFC5746289977F900EF13F4 /* PackageTableViewCell */,
 				EEFC5747289977FC00EF13F4 /* CarrierTableViewCell */,
@@ -373,7 +359,7 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EE35802D28D7FC5E00EF9244 /* SideMenuVC.swift */,
+				EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */,
 				EE19AAEE28C969870094E8FE /* Edit Tracking Number VC */,
 				EE56B53628B5A6C900676F48 /* Add */,
 				EE56B53328B5912D00676F48 /* Home */,
@@ -491,7 +477,6 @@
 				EEFC572D2898B37600EF13F4 /* Assets.xcassets in Resources */,
 				EEAF767828B01E4800CA9FA0 /* carriers.json in Resources */,
 				EEFC57282898B37500EF13F4 /* Main.storyboard in Resources */,
-				EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +541,7 @@
 				EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */,
 				EE56B53828B5B8DE00676F48 /* GoShippoRequest.swift in Sources */,
 				EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */,
-				EE35802E28D7FC5E00EF9244 /* SideMenuVC.swift in Sources */,
+				EE35802E28D7FC5E00EF9244 /* SideMenuViewController.swift in Sources */,
 				EEFC575E289AF76D00EF13F4 /* SignupViewController.swift in Sources */,
 				EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */,
 				EEE4B2E8289B85FD00650185 /* Extension UIView.swift in Sources */,
@@ -568,7 +553,6 @@
 				EEFC57212898B37500EF13F4 /* AppDelegate.swift in Sources */,
 				EEE4B2EA289B86E300650185 /* Extension UIViewController.swift in Sources */,
 				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
-				EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */,
 				EEDB835828C992350011133D /* Login - LifeCycle.swift in Sources */,
 				EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */,
 				EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */,

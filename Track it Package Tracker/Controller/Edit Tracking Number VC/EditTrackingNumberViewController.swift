@@ -19,9 +19,9 @@ extension EditTrackingNumberViewController
         self.carrierNameLabel.delegate = self //Delgate for the carriernamelable. Used to detect changes in the text field.
         
         populateViewFromPackageObject()//Populates the textbox and images from the passedPackage Object. 
-       
+        trackingNumberLabel.becomeFirstResponder()// Displays keyboard and make this the first responder
         
-        //carrierCode = (passedPackage.packageCarrierCode)! //sets carrier Code to the
+        
        
   
    

@@ -7,12 +7,13 @@
 
 import UIKit
 
-class SideMenuVC: UIViewController
+class SideMenuViewController: UIViewController
 {
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        print("Displaying the VC")
     }
     
 }

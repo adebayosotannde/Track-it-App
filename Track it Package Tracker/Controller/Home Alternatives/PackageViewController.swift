@@ -14,6 +14,7 @@ class PackageViewController: UIViewController
     var lastLocation: String?
     
     
+    @IBOutlet weak var trackingNumberLabel: UILabel!
     @IBOutlet weak var websiteLogo: UIImageView!
     @IBOutlet weak var lastUpdated: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -32,7 +33,17 @@ class PackageViewController: UIViewController
        
         
     }
-    @IBAction func backButtonPressed(_ sender: UIBarButtonItem)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        navigationController?.navigationBar.isHidden = false
+    }
+    @IBAction func backButtonPressed(_ sender: Any)
     {
         navigationController?.popViewController(animated: true)
        
@@ -114,6 +125,10 @@ extension PackageViewController
      //setupRefreshControl()  //Refresh Control
      setUpTableView() //Table View Setuo
     settup()
+        
+        
+        //Hide the navigation bar
+        navigationController?.navigationBar.isHidden = true
        
         
     
@@ -152,7 +167,8 @@ extension PackageViewController
     
     func setTitle()
     {
-        navigationItem.title =  passedPackage?.trackingNumber!
+       
+        trackingNumberLabel.text = passedPackage?.trackingNumber!
     }
     func setLastupdated()
     {

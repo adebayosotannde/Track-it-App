@@ -38,9 +38,6 @@ extension HomeMenuViewController
     //Registers the PackageViewCells
     func registerTableViewCells()
     {
-        let menuNib = UINib(nibName: SideMenuTableViewCell.classIdentifier,bundle: nil)
-        self.menuTableView.register(menuNib,forCellReuseIdentifier: SideMenuTableViewCell.cellIdentifier)
-        
         
         //RegisterTableViewCells
         let textFieldCell = UINib(nibName: PackageTableViewCell.classIdentifier,bundle: nil)

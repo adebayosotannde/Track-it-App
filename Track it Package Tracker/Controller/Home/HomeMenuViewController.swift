@@ -15,7 +15,7 @@ extension HomeMenuViewController
     {
         super.viewDidLoad()
 
-        menuTableView.backgroundColor = .clear
+
         registerTableViewCells()
         home = self.containerView.transform
         updateUI()
@@ -25,6 +25,8 @@ extension HomeMenuViewController
         
         //Setup for Side Menu
         setupSideMenu()
+        
+    
         
         
         
@@ -42,9 +44,17 @@ extension HomeMenuViewController
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //setup animation view
+        animationView.loopMode = .loop
+        animationView.play()
+        animationView.backgroundColor = .clear
+        
+    }
+    
    
     @objc func fireTimer() {
-        print("Timer fired!")
+        print("TODO:- Do something firetimer")
     }
     
 }
@@ -60,7 +70,7 @@ class HomeMenuViewController: UIViewController
     
     @IBOutlet var containerView: UIView!
     @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
-    @IBOutlet var menuTableView: UITableView!
+   
     
     @IBOutlet weak var packagesTableView: UITableView!
     //Variable used for the Side Menu
@@ -69,20 +79,22 @@ class HomeMenuViewController: UIViewController
     var home = CGAffineTransform()
     
     //Side Menu Outlets
-    @IBOutlet weak var currentVersion: UIButton!
+    
 
-    @IBOutlet weak var hamburgerMenuItem: UIBarButtonItem!
-    @IBOutlet weak var accountStatusButton: UIButton!
-    @IBOutlet weak var welcomeTExt: UILabel!
+   
     
     
     
     @IBAction func showHamburgerMenu(_ sender: UIBarButtonItem)
     {
        
-       
+     
+        let vc:SideMenuViewController = SideMenuViewController() as! SideMenuViewController
         
-        showMenu()
+            vc.modalPresentationStyle = .formSheet
+           
+            present(vc, animated: true)
+        
        
     }
     
@@ -96,29 +108,7 @@ class HomeMenuViewController: UIViewController
     }
     
     
-    @IBAction func showMenu(_ sender: UISwipeGestureRecognizer) {
-        
-     
-        
-       
-        if menu == false && swipeGesture.direction == .right
-        {
-        showMenu()
-        }
-        
-    }
     
-    
-    @IBAction func hideMenu(_ sender: Any)
-    {
-        
-        if menu == true
-        {
-        hideMenu()
-        }
-        
-        
-    }
     
     @IBAction func purchaseApp(_ sender: Any)
     {
@@ -135,47 +125,28 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        switch tableView
-        {
-        case menuTableView:
-            return options.count
-        case packagesTableView:
-            return packages.count
-        default:
-            fatalError()
-        }
+        return packages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         
-        switch tableView
-        {
-        case menuTableView:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SideMenuTableViewCell.cellIdentifier, for: indexPath) as! SideMenuTableViewCell
-            cell.descriptionLabel.text = options[indexPath.row].title
-            cell.descriptionLabel.textColor = options[indexPath.row].colors
-            return cell
-        case packagesTableView:
-            let cell = tableView.dequeueReusableCell(withIdentifier: PackageTableViewCell.cellIdentifier, for: indexPath) as! PackageTableViewCell
-            //A Package object is decleared.
-            
-            let tempPackage: PackageObject = packages[indexPath.row]
-            cell.carrierNameAndTracking.text = tempPackage.carrierName! + ": " + tempPackage.trackingNumber!
-            cell.packageDescription.text = tempPackage.descriptionOfPackage
-            cell.logoImage.image = UIImage(named: tempPackage.packageCarrierCode!)
-            cell.packageCurrentDescription.text = tempPackage.currentDescription! //Good
-            
-            
-            cell.circleIndicator.tintColor =  getColorFromString(nameAsString: tempPackage.circleIndicatorColor!)
-            
-            
-            
-            cell.selectionStyle = .none
-            return cell
-        default:
-            fatalError()
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: PackageTableViewCell.cellIdentifier, for: indexPath) as! PackageTableViewCell
+        //A Package object is decleared.
+        
+        let tempPackage: PackageObject = packages[indexPath.row]
+        cell.carrierNameAndTracking.text = tempPackage.carrierName! + ": " + tempPackage.trackingNumber!
+        cell.packageDescription.text = tempPackage.descriptionOfPackage
+        cell.logoImage.image = UIImage(named: tempPackage.packageCarrierCode!)
+        cell.packageCurrentDescription.text = tempPackage.currentDescription! //Good
+        
+        
+        cell.circleIndicator.tintColor =  getColorFromString(nameAsString: tempPackage.circleIndicatorColor!)
+        
+        
+        
+        cell.selectionStyle = .none
+        return cell
         
        
 
@@ -187,16 +158,7 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        switch tableView
-        {
-        case menuTableView:
-            return 45
-        case packagesTableView:
-            return 110
-        default:
-            fatalError()
-        }
-    
+        return 110
     }
     
 
@@ -205,29 +167,16 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
         
         let aPackage: PackageObject = packages[indexPath.row]
         
-        switch tableView
-        {
-        case menuTableView:
-            print("Menu tableview tapped")
-        case packagesTableView:
-            
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let packageView = storyBoard.instantiateViewController(withIdentifier: "PackageViewController") as! PackageViewController
-            
-            
-            packageView.passedPackage = aPackage
-            packageView.modalPresentationStyle = .fullScreen
-            packageView.modalTransitionStyle = .crossDissolve
-            tableView.deselectRow(at: indexPath, animated: true)
-            packageView.modalPresentationStyle = .popover
-            navigationController?.pushViewController(packageView, animated: true)
-            
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let packageView = storyBoard.instantiateViewController(withIdentifier: "PackageViewController") as! PackageViewController
         
-            
-        default:
-            fatalError()
-        }
+        
+        packageView.passedPackage = aPackage
+        packageView.modalPresentationStyle = .fullScreen
+        packageView.modalTransitionStyle = .crossDissolve
+        tableView.deselectRow(at: indexPath, animated: true)
+        packageView.modalPresentationStyle = .popover
+        navigationController?.pushViewController(packageView, animated: true)
         
         
         
@@ -252,46 +201,7 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 extension HomeMenuViewController
 {
     
-    func showMenu()
-    {
-        self.containerView.layer.cornerRadius = 40
-
-        let x = screen.width * 0.5
-        let originalTransform = self.containerView.transform
-        let scaledTransform = originalTransform.scaledBy(x: 0.8, y: 0.8)
-            let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: x, y: 0)
-            UIView.animate(withDuration: 0.7, animations:
-                            {
-                self.containerView.transform = scaledAndTranslatedTransform
-                
-            })
-        
-        menu = true
-        
-        
-        //DIABLES THE HAMBURGERMENU
-        hamburgerMenuItem.isEnabled = false
-        
-        
-    }
     
-    func hideMenu()
-    {
-        
-            UIView.animate(withDuration: 0.7, animations:
-                            {
-                
-                self.containerView.transform = self.home
-                self.containerView.layer.cornerRadius = 0
-              
-                
-            })
-        
-        menu = false
-        //RE-ENABLES THE HAMBURGERMENU
-        hamburgerMenuItem.isEnabled = true
-        
-    }
     
     
 }
