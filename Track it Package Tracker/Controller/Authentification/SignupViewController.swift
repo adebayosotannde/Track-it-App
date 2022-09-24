@@ -13,6 +13,7 @@ import CryptoKit
 
 
 
+
 //MARK: - Life Cycle
 extension SignupViewController
 {
@@ -275,6 +276,15 @@ extension SignupViewController: ASAuthorizationControllerDelegate,  ASAuthorizat
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeMenuViewController") as! HomeMenuViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
                
+                
+                
+            
+
+                
+                //Store Data
+                let firstName = ""
+                let lastName = ""
+                let emailaddress = ""
                 }
  
     

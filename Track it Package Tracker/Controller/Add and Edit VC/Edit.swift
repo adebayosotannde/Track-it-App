@@ -9,6 +9,7 @@ import UIKit
 import Contacts
 import CoreData
 
+//MARK: - LifeCycle Functions
 extension EditTrackingNumberViewController
 {
     override func viewDidLoad()
@@ -62,6 +63,7 @@ extension EditTrackingNumberViewController
     }
 }
 
+//MARK: - Main Class
 class EditTrackingNumberViewController: UIViewController
 {
     //MARK: - Variables and Constants
@@ -159,6 +161,7 @@ extension EditTrackingNumberViewController
     }
 }
 
+//MARK: - UITEXT Field Delgate
 extension EditTrackingNumberViewController: UITextFieldDelegate
 {
     

@@ -14,16 +14,14 @@
 		EE15DDE5289B366700F83FB2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE4289B366700F83FB2 /* FirebaseFirestoreSwift */; };
 		EE15DDE8289B37E300F83FB2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE7289B37E300F83FB2 /* GoogleSignIn */; };
 		EE15DDEA289B37E300F83FB2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE9289B37E300F83FB2 /* GoogleSignInSwift */; };
-		EE19AAE428C8ED9B0094E8FE /* fgdfg.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAE328C8ED9B0094E8FE /* fgdfg.swift */; };
 		EE19AAE728C9111E0094E8FE /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = EE19AAE628C9111E0094E8FE /* Siren */; };
-		EE19AAE928C91AB60094E8FE /* HomeMenuViewController Side Menu .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */; };
-		EE19AAEB28C9594E0094E8FE /* EditTrackingNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */; };
-		EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */; };
+		EE19AAEB28C9594E0094E8FE /* Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEA28C9594E0094E8FE /* Edit.swift */; };
+		EE19AAED28C95AAE0094E8FE /* Edit - Core Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEC28C95AAE0094E8FE /* Edit - Core Data.swift */; };
 		EE35802E28D7FC5E00EF9244 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */; };
 		EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */; };
 		EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52F28B58F1800676F48 /* CoreDataManager.swift */; };
 		EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53128B58F6100676F48 /* NetWorkManager.swift */; };
-		EE56B53528B5915200676F48 /* Add - Data Manager Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53428B5915200676F48 /* Add - Data Manager Functions.swift */; };
+		EE56B53528B5915200676F48 /* Add - CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53428B5915200676F48 /* Add - CoreData.swift */; };
 		EE56B53828B5B8DE00676F48 /* GoShippoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53728B5B8DE00676F48 /* GoShippoRequest.swift */; };
 		EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */; };
 		EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */; };
@@ -33,14 +31,12 @@
 		EE8B2CB228DE4B13002220F3 /* getStarted.json in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CB128DE4B13002220F3 /* getStarted.json */; };
 		EEAF767628B01ABC00CA9FA0 /* Carriers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767528B01ABC00CA9FA0 /* Carriers.swift */; };
 		EEAF767828B01E4800CA9FA0 /* carriers.json in Resources */ = {isa = PBXBuildFile; fileRef = EEAF767728B01E4800CA9FA0 /* carriers.json */; };
-		EEAF767A28B01F6F00CA9FA0 /* SelectCarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */; };
-		EEAF767E28B03B4E00CA9FA0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */; };
-		EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC9FA8928A5F706009D6848 /* PackageViewController.swift */; };
-		EEDB835828C992350011133D /* Login - LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB835728C992350011133D /* Login - LifeCycle.swift */; };
-		EEDB835B28C9937E0011133D /* Login - User Authentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB835A28C9937E0011133D /* Login - User Authentification.swift */; };
-		EEDB835D28C994240011133D /* Login - UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB835C28C994240011133D /* Login - UITextField.swift */; };
-		EEE4B2DE289B601500650185 /* AddTrakingNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */; };
-		EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */; };
+		EEAF767A28B01F6F00CA9FA0 /* Select Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767928B01F6F00CA9FA0 /* Select Carrier.swift */; };
+		EEAF767E28B03B4E00CA9FA0 /* Main View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767D28B03B4E00CA9FA0 /* Main View.swift */; };
+		EEC9FA8A28A5F706009D6848 /* Package Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC9FA8928A5F706009D6848 /* Package Details.swift */; };
+		EEDB835B28C9937E0011133D /* Login - Authentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB835A28C9937E0011133D /* Login - Authentification.swift */; };
+		EEE4B2DE289B601500650185 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DD289B601500650185 /* Add.swift */; };
+		EEE4B2E0289B60E200650185 /* Barcode Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DF289B60E200650185 /* Barcode Scanner.swift */; };
 		EEE4B2E2289B611E00650185 /* StringValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2E1289B611E00650185 /* StringValues.swift */; };
 		EEE4B2E5289B614D00650185 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2E4289B614D00650185 /* AppUtility.swift */; };
 		EEE4B2E8289B85FD00650185 /* Extension UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2E7289B85FD00650185 /* Extension UIView.swift */; };
@@ -57,7 +53,7 @@
 		EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5741289977AA00EF13F4 /* CarrierTableViewCell.swift */; };
 		EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */; };
 		EEFC574C28997A0000EF13F4 /* CarrierTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */; };
-		EEFC575C2899B6E500EF13F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */; };
+		EEFC575C2899B6E500EF13F4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575B2899B6E500EF13F4 /* Login.swift */; };
 		EEFC575E289AF76D00EF13F4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */; };
 		EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */; };
 		EEFFD49728C71515008C4267 /* DataObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFFD49628C71515008C4267 /* DataObjectManager.swift */; };
@@ -67,16 +63,14 @@
 		BC93CA77058F23596306BDB5 /* Pods-Track it Package Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Track it Package Tracker.release.xcconfig"; path = "Target Support Files/Pods-Track it Package Tracker/Pods-Track it Package Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		CFC495CB64380A986FB9A4A2 /* Pods-Track it Package Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Track it Package Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Track it Package Tracker/Pods-Track it Package Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		EE15DDED289B41FD00F83FB2 /* Track it Package Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Track it Package Tracker.entitlements"; sourceTree = "<group>"; };
-		EE19AAE328C8ED9B0094E8FE /* fgdfg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fgdfg.swift; sourceTree = "<group>"; };
-		EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeMenuViewController Side Menu .swift"; sourceTree = "<group>"; };
-		EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackingNumberViewController.swift; sourceTree = "<group>"; };
-		EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edit Data and Function.swift"; sourceTree = "<group>"; };
+		EE19AAEA28C9594E0094E8FE /* Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edit.swift; sourceTree = "<group>"; };
+		EE19AAEC28C95AAE0094E8FE /* Edit - Core Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edit - Core Data.swift"; sourceTree = "<group>"; };
 		EE19AAF028C970F10094E8FE /* simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; path = "../../../../var/folders/cb/w9zdlvl566j7l7wlbs8t2zp40000gn/T/simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; sourceTree = "<group>"; };
 		EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
 		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		EE56B53128B58F6100676F48 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
-		EE56B53428B5915200676F48 /* Add - Data Manager Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add - Data Manager Functions.swift"; sourceTree = "<group>"; };
+		EE56B53428B5915200676F48 /* Add - CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add - CoreData.swift"; sourceTree = "<group>"; };
 		EE56B53728B5B8DE00676F48 /* GoShippoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoShippoRequest.swift; sourceTree = "<group>"; };
 		EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOSHIPPOJSONDATA.swift; sourceTree = "<group>"; };
 		EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptions.swift; sourceTree = "<group>"; };
@@ -84,17 +78,14 @@
 		EE8B2CAA28DE3022002220F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE8B2CAF28DE34BD002220F3 /* addshipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addshipment.json; sourceTree = "<group>"; };
 		EE8B2CB128DE4B13002220F3 /* getStarted.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getStarted.json; sourceTree = "<group>"; };
-		EE8C2FEF28DD483B00A468DA /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
 		EEAF767528B01ABC00CA9FA0 /* Carriers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carriers.swift; sourceTree = "<group>"; };
 		EEAF767728B01E4800CA9FA0 /* carriers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carriers.json; sourceTree = "<group>"; };
-		EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarrierViewController.swift; sourceTree = "<group>"; };
-		EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		EEC9FA8928A5F706009D6848 /* PackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewController.swift; sourceTree = "<group>"; };
-		EEDB835728C992350011133D /* Login - LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login - LifeCycle.swift"; sourceTree = "<group>"; };
-		EEDB835A28C9937E0011133D /* Login - User Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login - User Authentification.swift"; sourceTree = "<group>"; };
-		EEDB835C28C994240011133D /* Login - UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login - UITextField.swift"; sourceTree = "<group>"; };
-		EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrakingNumberViewController.swift; sourceTree = "<group>"; };
-		EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewContoller.swift; sourceTree = "<group>"; };
+		EEAF767928B01F6F00CA9FA0 /* Select Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Select Carrier.swift"; sourceTree = "<group>"; };
+		EEAF767D28B03B4E00CA9FA0 /* Main View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main View.swift"; sourceTree = "<group>"; };
+		EEC9FA8928A5F706009D6848 /* Package Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Package Details.swift"; sourceTree = "<group>"; };
+		EEDB835A28C9937E0011133D /* Login - Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login - Authentification.swift"; sourceTree = "<group>"; };
+		EEE4B2DD289B601500650185 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		EEE4B2DF289B60E200650185 /* Barcode Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Barcode Scanner.swift"; sourceTree = "<group>"; };
 		EEE4B2E1289B611E00650185 /* StringValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValues.swift; sourceTree = "<group>"; };
 		EEE4B2E4289B614D00650185 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		EEE4B2E7289B85FD00650185 /* Extension UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension UIView.swift"; sourceTree = "<group>"; };
@@ -113,7 +104,7 @@
 		EEFC5741289977AA00EF13F4 /* CarrierTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierTableViewCell.swift; sourceTree = "<group>"; };
 		EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageTableViewCell.swift; sourceTree = "<group>"; };
 		EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarrierTableViewCell.xib; sourceTree = "<group>"; };
-		EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EEFC575B2899B6E500EF13F4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		EEFFD49628C71515008C4267 /* DataObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObjectManager.swift; sourceTree = "<group>"; };
@@ -148,13 +139,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		EE19AAEE28C969870094E8FE /* Edit Tracking Number VC */ = {
+		EE19AAEE28C969870094E8FE /* Add and Edit VC */ = {
 			isa = PBXGroup;
 			children = (
-				EE19AAEA28C9594E0094E8FE /* EditTrackingNumberViewController.swift */,
-				EE19AAEC28C95AAE0094E8FE /* Edit Data and Function.swift */,
+				EE19AAEA28C9594E0094E8FE /* Edit.swift */,
+				EE19AAEC28C95AAE0094E8FE /* Edit - Core Data.swift */,
+				EEE4B2DD289B601500650185 /* Add.swift */,
+				EE56B53428B5915200676F48 /* Add - CoreData.swift */,
 			);
-			path = "Edit Tracking Number VC";
+			path = "Add and Edit VC";
 			sourceTree = "<group>";
 		};
 		EE19AAEF28C970F10094E8FE /* Frameworks */ = {
@@ -175,15 +168,32 @@
 			path = Structs;
 			sourceTree = "<group>";
 		};
-		EE20FC2828DD0FE10041C2FC /* Login */ = {
+		EE53BC1B28DF3B20001B7F22 /* Barcode Package and Select Carrier */ = {
 			isa = PBXGroup;
 			children = (
-				EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */,
-				EEDB835C28C994240011133D /* Login - UITextField.swift */,
-				EEDB835A28C9937E0011133D /* Login - User Authentification.swift */,
-				EEDB835728C992350011133D /* Login - LifeCycle.swift */,
+				EEC9FA8928A5F706009D6848 /* Package Details.swift */,
+				EEE4B2DF289B60E200650185 /* Barcode Scanner.swift */,
+				EEAF767928B01F6F00CA9FA0 /* Select Carrier.swift */,
 			);
-			path = Login;
+			path = "Barcode Package and Select Carrier";
+			sourceTree = "<group>";
+		};
+		EE53BC1C28DF3B7A001B7F22 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EE53BC1D28DF3B8F001B7F22 /* Lottie */,
+				EEFC572C2898B37600EF13F4 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EE53BC1D28DF3B8F001B7F22 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				EE8B2CAF28DE34BD002220F3 /* addshipment.json */,
+				EE8B2CB128DE4B13002220F3 /* getStarted.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		EE56224528DDF2D200A06298 /* Supporting Files */ = {
@@ -213,43 +223,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		EE56B53328B5912D00676F48 /* Home */ = {
+		EE56B53328B5912D00676F48 /* Main Home and SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				EEAF767D28B03B4E00CA9FA0 /* Main View.swift */,
 				EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */,
-				EE19AAE828C91AB60094E8FE /* HomeMenuViewController Side Menu .swift */,
 				EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */,
+				EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */,
 			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		EE56B53628B5A6C900676F48 /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */,
-				EE56B53428B5915200676F48 /* Add - Data Manager Functions.swift */,
-			);
-			path = Add;
-			sourceTree = "<group>";
-		};
-		EE84F309289F108900FCDBF8 /* Home Alternatives */ = {
-			isa = PBXGroup;
-			children = (
-				EEAF767D28B03B4E00CA9FA0 /* MainViewController.swift */,
-				EEC9FA8928A5F706009D6848 /* PackageViewController.swift */,
-				EE19AAE328C8ED9B0094E8FE /* fgdfg.swift */,
-				EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */,
-				EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */,
-			);
-			path = "Home Alternatives";
-			sourceTree = "<group>";
-		};
-		EEDB835928C9927D0011133D /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				EE20FC2828DD0FE10041C2FC /* Login */,
-			);
-			path = Login;
+			path = "Main Home and SideMenu";
 			sourceTree = "<group>";
 		};
 		EEE4B2E3289B612F00650185 /* Strings */ = {
@@ -275,7 +257,6 @@
 		EEFC57142898B37500EF13F4 = {
 			isa = PBXGroup;
 			children = (
-				EE8C2FEF28DD483B00A468DA /* Script.sh */,
 				EEFC571F2898B37500EF13F4 /* Track it Package Tracker */,
 				EEFC571E2898B37500EF13F4 /* Products */,
 				EE19AAEF28C970F10094E8FE /* Frameworks */,
@@ -299,12 +280,10 @@
 				EEFC574D2899874C00EF13F4 /* Model */,
 				EEFC57492899785300EF13F4 /* View */,
 				EEFC574A2899786800EF13F4 /* Controller */,
-				EEFC572C2898B37600EF13F4 /* Assets.xcassets */,
+				EE53BC1C28DF3B7A001B7F22 /* Assets */,
 				EEFC57312898B37600EF13F4 /* Info.plist */,
 				EE8B2CAA28DE3022002220F3 /* GoogleService-Info.plist */,
 				EEFC57292898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld */,
-				EE8B2CB128DE4B13002220F3 /* getStarted.json */,
-				EE8B2CAF28DE34BD002220F3 /* addshipment.json */,
 			);
 			path = "Track it Package Tracker";
 			sourceTree = "<group>";
@@ -359,12 +338,10 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */,
-				EE19AAEE28C969870094E8FE /* Edit Tracking Number VC */,
-				EE56B53628B5A6C900676F48 /* Add */,
-				EE56B53328B5912D00676F48 /* Home */,
-				EE84F309289F108900FCDBF8 /* Home Alternatives */,
 				EEFC5761289AF78100EF13F4 /* Authentification */,
+				EE56B53328B5912D00676F48 /* Main Home and SideMenu */,
+				EE19AAEE28C969870094E8FE /* Add and Edit VC */,
+				EE53BC1B28DF3B20001B7F22 /* Barcode Package and Select Carrier */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,7 +361,8 @@
 		EEFC5761289AF78100EF13F4 /* Authentification */ = {
 			isa = PBXGroup;
 			children = (
-				EEDB835928C9927D0011133D /* Login */,
+				EEFC575B2899B6E500EF13F4 /* Login.swift */,
+				EEDB835A28C9937E0011133D /* Login - Authentification.swift */,
 				EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */,
 				EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */,
 			);
@@ -529,15 +507,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEE4B2DE289B601500650185 /* AddTrakingNumberViewController.swift in Sources */,
-				EE19AAEB28C9594E0094E8FE /* EditTrackingNumberViewController.swift in Sources */,
+				EEE4B2DE289B601500650185 /* Add.swift in Sources */,
+				EE19AAEB28C9594E0094E8FE /* Edit.swift in Sources */,
 				EEFFD49728C71515008C4267 /* DataObjectManager.swift in Sources */,
-				EEAF767E28B03B4E00CA9FA0 /* MainViewController.swift in Sources */,
+				EEAF767E28B03B4E00CA9FA0 /* Main View.swift in Sources */,
 				EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */,
 				EEE4B2E5289B614D00650185 /* AppUtility.swift in Sources */,
-				EEDB835B28C9937E0011133D /* Login - User Authentification.swift in Sources */,
-				EEDB835D28C994240011133D /* Login - UITextField.swift in Sources */,
-				EEFC575C2899B6E500EF13F4 /* LoginViewController.swift in Sources */,
+				EEDB835B28C9937E0011133D /* Login - Authentification.swift in Sources */,
+				EEFC575C2899B6E500EF13F4 /* Login.swift in Sources */,
 				EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */,
 				EE56B53828B5B8DE00676F48 /* GoShippoRequest.swift in Sources */,
 				EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */,
@@ -546,22 +523,19 @@
 				EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */,
 				EEE4B2E8289B85FD00650185 /* Extension UIView.swift in Sources */,
 				EEE4B2E2289B611E00650185 /* StringValues.swift in Sources */,
-				EE19AAE428C8ED9B0094E8FE /* fgdfg.swift in Sources */,
 				EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */,
 				EEFC57402899779E00EF13F4 /* ActivityTableViewCell.swift in Sources */,
 				EEAF767628B01ABC00CA9FA0 /* Carriers.swift in Sources */,
 				EEFC57212898B37500EF13F4 /* AppDelegate.swift in Sources */,
 				EEE4B2EA289B86E300650185 /* Extension UIViewController.swift in Sources */,
 				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
-				EEDB835828C992350011133D /* Login - LifeCycle.swift in Sources */,
-				EE19AAED28C95AAE0094E8FE /* Edit Data and Function.swift in Sources */,
-				EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */,
-				EE56B53528B5915200676F48 /* Add - Data Manager Functions.swift in Sources */,
+				EE19AAED28C95AAE0094E8FE /* Edit - Core Data.swift in Sources */,
+				EEE4B2E0289B60E200650185 /* Barcode Scanner.swift in Sources */,
+				EE56B53528B5915200676F48 /* Add - CoreData.swift in Sources */,
 				EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */,
-				EEAF767A28B01F6F00CA9FA0 /* SelectCarrierViewController.swift in Sources */,
-				EE19AAE928C91AB60094E8FE /* HomeMenuViewController Side Menu .swift in Sources */,
+				EEAF767A28B01F6F00CA9FA0 /* Select Carrier.swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
-				EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */,
+				EEC9FA8A28A5F706009D6848 /* Package Details.swift in Sources */,
 				EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */,
 				EE5829FD289EDE220073FDB7 /* HomeMenuViewController.swift in Sources */,
 				EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */,

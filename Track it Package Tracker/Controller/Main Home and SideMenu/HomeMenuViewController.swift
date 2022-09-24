@@ -17,14 +17,13 @@ extension HomeMenuViewController
 
 
         registerTableViewCells()
-        home = self.containerView.transform
+        
         updateUI()
     registerNotificationCenter()
         let timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
         
         
-        //Setup for Side Menu
-        setupSideMenu()
+    
         
     
         
@@ -73,10 +72,7 @@ class HomeMenuViewController: UIViewController
    
     
     @IBOutlet weak var packagesTableView: UITableView!
-    //Variable used for the Side Menu
-    let screen = UIScreen.main.bounds
-    var menu = false
-    var home = CGAffineTransform()
+    
     
     //Side Menu Outlets
     
@@ -88,13 +84,6 @@ class HomeMenuViewController: UIViewController
     @IBAction func showHamburgerMenu(_ sender: UIBarButtonItem)
     {
        
-     
-        let vc:SideMenuViewController = SideMenuViewController() as! SideMenuViewController
-        
-            vc.modalPresentationStyle = .formSheet
-           
-            present(vc, animated: true)
-        
        
     }
     
@@ -113,11 +102,7 @@ class HomeMenuViewController: UIViewController
     @IBAction func purchaseApp(_ sender: Any)
     {
     }
-    @IBAction func signonandLogoutPressed(_ sender: Any)
-    {
-        loginOrSignout()
-    }
-    
+
 }
 
 //MARK: - Table View Controller Functions

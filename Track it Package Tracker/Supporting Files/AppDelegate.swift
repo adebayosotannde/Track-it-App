@@ -12,11 +12,11 @@ import Siren
 import Foundation
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
+    //Variables
     static let sharedManager = AppDelegate() //Create Instance of Persistance
     let userNotificationCenter = UNUserNotificationCenter.current()
-    
     var orientationLock = UIInterfaceOrientationMask .portrait
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -27,12 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         
-        //Request notification permission
-        requestNotficationPermission()
-        
-        //MARK: - Configure Firebase
-        FirebaseApp.configure()
-        let db = Firestore.firestore()
+       
+        requestNotficationPermission() //Request notification permission
+        registerFirebaseDatabase() //Sets up Firebase Notifications
         
         return true
     }
@@ -136,6 +133,13 @@ extension AppDelegate
                 print("Error: ", error)
             }
         }
+    }
+    
+    private func registerFirebaseDatabase()
+    {
+        //MARK: - Configure Firebase
+        FirebaseApp.configure()
+        let db = Firestore.firestore()
     }
     
     /**
