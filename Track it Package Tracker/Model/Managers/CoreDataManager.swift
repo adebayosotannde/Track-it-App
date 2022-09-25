@@ -41,28 +41,19 @@ class CoreDataManager
     return container
   }()
   
-func getAllPackager() -> [PackageObject]?
-    {
-        return packages
-    }
-    
-    func getAllDeliveredPackages() -> [PackageObject]
+
+    func getAllDeliveredPackagesInOrder() -> [PackageObject]
     {
         let request : NSFetchRequest<PackageObject> = PackageObject.fetchRequest()
-        
         do
         {
             let array = try context.fetch(request)
-            var duplicateArray = try context.fetch(request)
-            
-            for item in array.indices
-            {
-                if array[item].delivered == false
-                {
-                    duplicateArray.remove(at: item)
-                }
-            }
-            return duplicateArray
+            var duplicateArray = array
+          
+            duplicateArray.removeAll(where: {false == $0.delivered})
+
+
+            return duplicateArray.reversed()
         }
         catch
         {
@@ -71,12 +62,25 @@ func getAllPackager() -> [PackageObject]?
         }
     }
     
-    func insertPackageObject(newObject: PackageObject)
+    func getActivePackagesInOrder() -> [PackageObject]
     {
-        packages.append(newObject)
-        save()
+        let request : NSFetchRequest<PackageObject> = PackageObject.fetchRequest()
+        do
+        {
+            let array = try context.fetch(request)
+            var duplicateArray = array
+          
+            duplicateArray.removeAll(where: {true == $0.delivered})
+            return duplicateArray.reversed()
+        }
+        catch
+        {
+            print("Error Loading Context \(error)")
+            return packages
+        }
     }
     
+
     func delete(person : PackageObject)
     {
       do
@@ -119,17 +123,7 @@ func getAllPackager() -> [PackageObject]?
     
     func loadTrackingNumberRevered() -> [PackageObject]
     {
-        let request : NSFetchRequest<PackageObject> = PackageObject.fetchRequest()
-        
-        do
-        {
-            return try context.fetch(request).reversed()
-        }
-        catch
-        {
-            print("Error Loading Context \(error)")
-            return packages
-        }
+        loadTrackingNumber().reversed()
     }
     
     func save()
@@ -148,24 +142,6 @@ func getAllPackager() -> [PackageObject]?
         }
         }
        
-    
-    func saveNoUpdates()
-    {
-        do
-        {
-            try context.save()
-        } catch
-        {
-            print("Error Saving Context \(error)")
-        }
-        postBarcodeNotification(code: StringLiteral.updateHomeViewData) //updates the home view controller
-    }
-    func randomString(length: Int) -> String
-    {
-      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-      return String((0..<length).map{ _ in letters.randomElement()! })
-    }
-    
     func fetchDataForAllPackages()
     {
         print("Fetching Data for All Packages")

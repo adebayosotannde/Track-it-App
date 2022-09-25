@@ -13,48 +13,32 @@ import CoreData
 class ArchivedPackagesViewController: UIViewController
 {
     
+    //IBOutlets and Actions
     @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var packagesTableView: UITableView!
     
-    var packages = [PackageObject]() //Pacakge Object Array
-    let delivered = CoreDataManager.sharedManager.loadTrackingNumberRevered()
-    var deliverePackages:[PackageObject] = []
-    
-    
+    let delivered = CoreDataManager.sharedManager.getActivePackagesInOrder() //Delivered Packages
+   
+
     override func viewDidLoad()
     {
-       
-        
         super.viewDidLoad()
-        print("in the view did load")
-        //getDeliveredPackages()
-        registerTableViewCells()
-        updateUI()
-        getDeliveredPackages()
-        
-       
-        
-        //Playing
-        print("Origanl PackageObject \(packages.count)")
-        print("Delivered PackageObject \(CoreDataManager.sharedManager.getAllDeliveredPackages().count)")
+        registerTableViewCells() //Register the notification center
+        updateUI() //Updates the User interface
     
-        
     }
     
-     
-    
-  
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
-        
         startAnimationView() //Start the animation
     }
     
     
-    //MARK: - Setup Functions 
-    
-    fileprivate func startAnimationView() {
+    //MARK: - Setup Functions
+    fileprivate func startAnimationView()
+    {
         //Start the animations view
         animationView.loopMode = .loop
         animationView.backgroundColor = .clear
@@ -65,25 +49,20 @@ class ArchivedPackagesViewController: UIViewController
     //Registers the PackageViewCells
     func registerTableViewCells()
     {
-        
         //RegisterTableViewCells
         let textFieldCell = UINib(nibName: PackageTableViewCell.classIdentifier,bundle: nil)
         self.packagesTableView.register(textFieldCell,forCellReuseIdentifier: PackageTableViewCell.cellIdentifier)
-        
-        
     }
     
      func updateUI()
     {
-        packages = CoreDataManager.sharedManager.loadTrackingNumberRevered() //Retrive Package Objects Array
         self.packagesTableView.reloadData()
         hideTableViewIfThereAreNoPackages()
-        
     }
     
     func hideTableViewIfThereAreNoPackages()
     {
-        if(deliverePackages.count == 0 )
+        if(delivered.count == 0 )
           {
               packagesTableView.isHidden = true
             
@@ -96,23 +75,17 @@ class ArchivedPackagesViewController: UIViewController
             }
     }
     
-    func getDeliveredPackages()
+    func getColorFromString(nameAsString: String)-> UIColor
     {
-      
-        for package in packages
+        switch nameAsString.lowercased()
         {
-            if package.delivered == true
-            {
-                deliverePackages.append(package)
-               
-            }else
-            {
-               
-            }
+        case "green":
+            return .systemGreen
+        case "yellow":
+            return .systemYellow
+        default:
+            return .systemRed
         }
-        updateUI()
-        
-       
     }
 }
 
@@ -122,7 +95,7 @@ extension ArchivedPackagesViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        deliverePackages.count
+        delivered.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -130,12 +103,12 @@ extension ArchivedPackagesViewController: UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: PackageTableViewCell.cellIdentifier, for: indexPath) as! PackageTableViewCell
         //A Package object is decleared.
         
-        let tempPackage: PackageObject = deliverePackages[indexPath.row]
+        let tempPackage: PackageObject = delivered[indexPath.row]
         cell.carrierNameAndTracking.text = tempPackage.carrierName! + ": " + tempPackage.trackingNumber!
         cell.packageDescription.text = tempPackage.descriptionOfPackage
         cell.logoImage.image = UIImage(named: tempPackage.packageCarrierCode!)
         cell.packageCurrentDescription.text = tempPackage.currentDescription! //Good
-        
+        cell.circleIndicator.tintColor =  getColorFromString(nameAsString: tempPackage.circleIndicatorColor!)
         cell.selectionStyle = .none
         return cell
     }
@@ -146,6 +119,7 @@ extension ArchivedPackagesViewController: UITableViewDataSource
 }
 
 
+//MARK: -  UITable View Controller DataSource Functions.
 extension ArchivedPackagesViewController:  UITableViewDelegate
 {
     //Height Specified for the packages

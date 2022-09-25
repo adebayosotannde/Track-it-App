@@ -53,11 +53,7 @@ extension HomeMenuViewController
         
         
     }
-    
-    func addPackageObject(newObject: PackageObject)
-    {
-        CoreDataManager.sharedManager.insertPackageObject(newObject: newObject) //Add Object to Core Data
-    }
+
     
     func deletePackageObject(deleteObject: PackageObject)
     {
