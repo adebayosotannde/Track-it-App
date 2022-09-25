@@ -80,6 +80,7 @@ class PackageViewController: UIViewController
             { (action) in
                 // handle case of user logging out
                 self.passedPackage?.delivered = true
+                CoreDataManager.sharedManager.save()
             }
             // add the logout action to the alert controller
             alertController.addAction(logoutAction2)

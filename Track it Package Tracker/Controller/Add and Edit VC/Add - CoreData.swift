@@ -48,7 +48,7 @@ extension AddTrakingNumberViewController
         //Do Nothing. Inform the User that the package already exists.
 
         //Alert View Controller
-        let alert = UIAlertController(title: "Duplicate Pacakge", message: "Pacakge exists already in the system. You cannot add it again.", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Duplicate Pacakge", message: "Pacakge exists already exists.", preferredStyle: UIAlertController.Style.alert)
 
         //Alert Action
         alert.addAction(UIAlertAction(title: "Got it!", style: .destructive, handler:
@@ -63,20 +63,25 @@ extension AddTrakingNumberViewController
     
     func createNewPackageObject()
     {
-        let newPackage = PackageObject(context: context)
+                let newPackage = PackageObject(context: context)
 
-        //Set Package properties
-        newPackage.trackingNumber = trackingNumberLabel.text!
-        newPackage.descriptionOfPackage = packageDescriptionLabel.text
-        newPackage.packageCarrierCode = carrierCode
-        newPackage.carrierName = carrierName
+                //Set Package properties
+                newPackage.trackingNumber = trackingNumberLabel.text!
+                newPackage.descriptionOfPackage = packageDescriptionLabel.text
+                newPackage.packageCarrierCode = carrierCode
+                newPackage.carrierName = carrierName
+
+                newPackage.circleIndicatorColor = StringLiteral.redColor
+                newPackage.currentDescription =  StringLiteral.defaultDescription
+
+
+                CoreDataManager.sharedManager.save()//Cause the
+                NetWorkManager.sharedManager.requestData(packageDetail: newPackage)
+
         
-        newPackage.circleIndicatorColor = StringLiteral.redColor
-        newPackage.currentDescription =  StringLiteral.defaultDescription
+      
         
         
-        CoreDataManager.sharedManager.save()//Cause the
-        NetWorkManager.sharedManager.requestData(packageDetail: newPackage)
     }
     
     func dismissViewController()

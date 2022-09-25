@@ -18,6 +18,10 @@
 		EE19AAEB28C9594E0094E8FE /* Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEA28C9594E0094E8FE /* Edit.swift */; };
 		EE19AAED28C95AAE0094E8FE /* Edit - Core Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19AAEC28C95AAE0094E8FE /* Edit - Core Data.swift */; };
 		EE35802E28D7FC5E00EF9244 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */; };
+		EE53BC2328DF4A24001B7F22 /* notifications.json in Resources */ = {isa = PBXBuildFile; fileRef = EE53BC2028DF4A24001B7F22 /* notifications.json */; };
+		EE53BC2428DF4A24001B7F22 /* location.json in Resources */ = {isa = PBXBuildFile; fileRef = EE53BC2128DF4A24001B7F22 /* location.json */; };
+		EE53BC2528DF4A24001B7F22 /* scanner.json in Resources */ = {isa = PBXBuildFile; fileRef = EE53BC2228DF4A24001B7F22 /* scanner.json */; };
+		EE53BC2828DF4AD7001B7F22 /* ok.json in Resources */ = {isa = PBXBuildFile; fileRef = EE53BC2728DF4AD7001B7F22 /* ok.json */; };
 		EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */; };
 		EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52F28B58F1800676F48 /* CoreDataManager.swift */; };
 		EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53128B58F6100676F48 /* NetWorkManager.swift */; };
@@ -29,6 +33,8 @@
 		EE8B2CAB28DE3022002220F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CAA28DE3022002220F3 /* GoogleService-Info.plist */; };
 		EE8B2CB028DE34BD002220F3 /* addshipment.json in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CAF28DE34BD002220F3 /* addshipment.json */; };
 		EE8B2CB228DE4B13002220F3 /* getStarted.json in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CB128DE4B13002220F3 /* getStarted.json */; };
+		EEA1AB0228DFA88B00015952 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = EEA1AB0128DFA88B00015952 /* empty.json */; };
+		EEA1AB0428DFA95800015952 /* Archived Packages.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1AB0328DFA95800015952 /* Archived Packages.swift */; };
 		EEAF767628B01ABC00CA9FA0 /* Carriers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767528B01ABC00CA9FA0 /* Carriers.swift */; };
 		EEAF767828B01E4800CA9FA0 /* carriers.json in Resources */ = {isa = PBXBuildFile; fileRef = EEAF767728B01E4800CA9FA0 /* carriers.json */; };
 		EEAF767A28B01F6F00CA9FA0 /* Select Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767928B01F6F00CA9FA0 /* Select Carrier.swift */; };
@@ -67,6 +73,10 @@
 		EE19AAEC28C95AAE0094E8FE /* Edit - Core Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edit - Core Data.swift"; sourceTree = "<group>"; };
 		EE19AAF028C970F10094E8FE /* simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; path = "../../../../var/folders/cb/w9zdlvl566j7l7wlbs8t2zp40000gn/T/simulator_screenshot_63B1B47E-C093-4F52-9A6C-6842F7291732.png"; sourceTree = "<group>"; };
 		EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		EE53BC2028DF4A24001B7F22 /* notifications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notifications.json; sourceTree = "<group>"; };
+		EE53BC2128DF4A24001B7F22 /* location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location.json; sourceTree = "<group>"; };
+		EE53BC2228DF4A24001B7F22 /* scanner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scanner.json; sourceTree = "<group>"; };
+		EE53BC2728DF4AD7001B7F22 /* ok.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ok.json; sourceTree = "<group>"; };
 		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
 		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		EE56B53128B58F6100676F48 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
@@ -78,6 +88,8 @@
 		EE8B2CAA28DE3022002220F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE8B2CAF28DE34BD002220F3 /* addshipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addshipment.json; sourceTree = "<group>"; };
 		EE8B2CB128DE4B13002220F3 /* getStarted.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getStarted.json; sourceTree = "<group>"; };
+		EEA1AB0128DFA88B00015952 /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
+		EEA1AB0328DFA95800015952 /* Archived Packages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archived Packages.swift"; sourceTree = "<group>"; };
 		EEAF767528B01ABC00CA9FA0 /* Carriers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carriers.swift; sourceTree = "<group>"; };
 		EEAF767728B01E4800CA9FA0 /* carriers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carriers.json; sourceTree = "<group>"; };
 		EEAF767928B01F6F00CA9FA0 /* Select Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Select Carrier.swift"; sourceTree = "<group>"; };
@@ -181,6 +193,7 @@
 		EE53BC1C28DF3B7A001B7F22 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				EE53BC2628DF4A31001B7F22 /* Onboarding */,
 				EE53BC1D28DF3B8F001B7F22 /* Lottie */,
 				EEFC572C2898B37600EF13F4 /* Assets.xcassets */,
 			);
@@ -190,10 +203,22 @@
 		EE53BC1D28DF3B8F001B7F22 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				EEA1AB0128DFA88B00015952 /* empty.json */,
 				EE8B2CAF28DE34BD002220F3 /* addshipment.json */,
 				EE8B2CB128DE4B13002220F3 /* getStarted.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		EE53BC2628DF4A31001B7F22 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EE53BC2728DF4AD7001B7F22 /* ok.json */,
+				EE53BC2128DF4A24001B7F22 /* location.json */,
+				EE53BC2028DF4A24001B7F22 /* notifications.json */,
+				EE53BC2228DF4A24001B7F22 /* scanner.json */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		EE56224528DDF2D200A06298 /* Supporting Files */ = {
@@ -230,6 +255,7 @@
 				EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */,
 				EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */,
 				EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */,
+				EEA1AB0328DFA95800015952 /* Archived Packages.swift */,
 			);
 			path = "Main Home and SideMenu";
 			sourceTree = "<group>";
@@ -446,6 +472,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8B2CB028DE34BD002220F3 /* addshipment.json in Resources */,
+				EEA1AB0228DFA88B00015952 /* empty.json in Resources */,
+				EE53BC2528DF4A24001B7F22 /* scanner.json in Resources */,
 				EEFC573A2899774800EF13F4 /* ActivityTableViewCell.xib in Resources */,
 				EE8B2CB228DE4B13002220F3 /* getStarted.json in Resources */,
 				EEFC57302898B37600EF13F4 /* LaunchScreen.storyboard in Resources */,
@@ -453,7 +481,10 @@
 				EEFC574C28997A0000EF13F4 /* CarrierTableViewCell.xib in Resources */,
 				EEFC573E2899776000EF13F4 /* PackageTableViewCell.xib in Resources */,
 				EEFC572D2898B37600EF13F4 /* Assets.xcassets in Resources */,
+				EE53BC2828DF4AD7001B7F22 /* ok.json in Resources */,
+				EE53BC2328DF4A24001B7F22 /* notifications.json in Resources */,
 				EEAF767828B01E4800CA9FA0 /* carriers.json in Resources */,
+				EE53BC2428DF4A24001B7F22 /* location.json in Resources */,
 				EEFC57282898B37500EF13F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +540,7 @@
 			files = (
 				EEE4B2DE289B601500650185 /* Add.swift in Sources */,
 				EE19AAEB28C9594E0094E8FE /* Edit.swift in Sources */,
+				EEA1AB0428DFA95800015952 /* Archived Packages.swift in Sources */,
 				EEFFD49728C71515008C4267 /* DataObjectManager.swift in Sources */,
 				EEAF767E28B03B4E00CA9FA0 /* Main View.swift in Sources */,
 				EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */,

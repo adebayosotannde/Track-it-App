@@ -11,9 +11,17 @@ import UIKit
 
 extension HomeMenuViewController
 {
+    
+        
+    
     public func updateUI()
     {
-        packages = CoreDataManager.sharedManager.loadTrackingNumber() //Retrive Package Objects Array
+        
+        //Reveres the context
+        
+        
+        packages = CoreDataManager.sharedManager.loadTrackingNumberRevered()//Retrive Package Objects Array
+        
         self.packagesTableView.reloadData()
         hideTableViewIfThereAreNoPackages()
         
@@ -76,3 +84,4 @@ extension HomeMenuViewController
         }
     }
 }
+

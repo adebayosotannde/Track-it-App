@@ -1,3 +1,4 @@
+
 //
 //  SideMenuViewController.swift
 //  Track it Package Tracker
@@ -17,9 +18,12 @@ extension HomeMenuViewController
 
 
         registerTableViewCells()
-        
+        registerNotificationCenter()
         updateUI()
-    registerNotificationCenter()
+      
+        
+        
+   
         let timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
         
         
@@ -62,8 +66,10 @@ extension HomeMenuViewController
 class HomeMenuViewController: UIViewController
 {
     
+    @IBOutlet weak var tabBarViwController: UITabBar!
     @IBOutlet weak var animationView: AnimationView!
-    var packages = [PackageObject]() //Pacakge Object Array
+    var packages = [PackageObject]()//Pacakge Object Array
+   
     
     
     
@@ -182,14 +188,6 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 }
 
 
-//MARK: - Side Menu Functions
-extension HomeMenuViewController
-{
-    
-    
-    
-    
-}
 
 //MARK: - Notification Canter
 extension HomeMenuViewController

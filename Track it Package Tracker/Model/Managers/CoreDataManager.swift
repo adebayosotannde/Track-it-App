@@ -13,7 +13,7 @@ import UIKit
 class CoreDataManager
 {
     
-    var packages = [PackageObject]() //Pacakge Object Array
+    var packages = [PackageObject]()  //Pacakge Object Array
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //Core Data Contect to Save Data
   
 
@@ -28,6 +28,12 @@ class CoreDataManager
     container.loadPersistentStores(completionHandler:
     { (storeDescription, error) in
       
+        if storeDescription == storeDescription
+        {
+          
+  
+            
+        }
       if let error = error as NSError? {
         fatalError("Unresolved error \(error), \(error.userInfo)")
       }
@@ -35,7 +41,35 @@ class CoreDataManager
     return container
   }()
   
-
+func getAllPackager() -> [PackageObject]?
+    {
+        return packages
+    }
+    
+    func getAllDeliveredPackages() -> [PackageObject]
+    {
+        let request : NSFetchRequest<PackageObject> = PackageObject.fetchRequest()
+        
+        do
+        {
+            let array = try context.fetch(request)
+            var duplicateArray = try context.fetch(request)
+            
+            for item in array.indices
+            {
+                if array[item].delivered == false
+                {
+                    duplicateArray.remove(at: item)
+                }
+            }
+            return duplicateArray
+        }
+        catch
+        {
+            print("Error Loading Context \(error)")
+            return packages
+        }
+    }
     
     func insertPackageObject(newObject: PackageObject)
     {
@@ -73,7 +107,23 @@ class CoreDataManager
         
         do
         {
-            return try context.fetch(request)
+            let array = try context.fetch(request)
+            return array
+        }
+        catch
+        {
+            print("Error Loading Context \(error)")
+            return packages
+        }
+    }
+    
+    func loadTrackingNumberRevered() -> [PackageObject]
+    {
+        let request : NSFetchRequest<PackageObject> = PackageObject.fetchRequest()
+        
+        do
+        {
+            return try context.fetch(request).reversed()
         }
         catch
         {
