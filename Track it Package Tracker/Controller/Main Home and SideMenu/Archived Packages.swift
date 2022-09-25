@@ -90,7 +90,7 @@ class ArchivedPackagesViewController: UIViewController
 }
 
 
-//MARK: -  UITable View Controller Delgate Functions.
+//MARK: -  UITable View Controller DataSource Functions.
 extension ArchivedPackagesViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -119,7 +119,7 @@ extension ArchivedPackagesViewController: UITableViewDataSource
 }
 
 
-//MARK: -  UITable View Controller DataSource Functions.
+//MARK: -  UITable View Controller Delgate Functions.
 extension ArchivedPackagesViewController:  UITableViewDelegate
 {
     //Height Specified for the packages
@@ -127,4 +127,27 @@ extension ArchivedPackagesViewController:  UITableViewDelegate
     {
         return 110
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        let aPackage: PackageObject = delivered[indexPath.row]
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let packageView = storyBoard.instantiateViewController(withIdentifier: "PackageViewController") as! PackageViewController
+        
+        
+        packageView.passedPackage = aPackage
+        packageView.modalPresentationStyle = .fullScreen
+        packageView.modalTransitionStyle = .crossDissolve
+        tableView.deselectRow(at: indexPath, animated: true)
+        packageView.modalPresentationStyle = .popover
+        navigationController?.pushViewController(packageView, animated: true)
+        
+        
+        
+    }
+    
+    
+    
 }
