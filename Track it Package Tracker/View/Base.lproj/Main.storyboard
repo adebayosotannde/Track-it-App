@@ -45,9 +45,6 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="purchaseApp:" destination="5gd-95-7uu" eventType="touchUpInside" id="f5k-EH-Mic"/>
-                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0v9-gu-B1p">
                                         <rect key="frame" x="0.0" y="199.33333333333331" width="428" height="30"/>
@@ -1270,8 +1267,8 @@
                             <imageReference key="image" image="line.3.horizontal" catalog="system"/>
                             <color key="tintColor" name="greenTheme"/>
                             <connections>
-                                <action selector="showHamburgerMenu:" destination="5gd-95-7uu" id="GNJ-1y-QfM"/>
-                                <segue destination="95P-2Y-HmQ" kind="show" id="4h4-j8-csD"/>
+                                <action selector="menuButtonPressed:" destination="5gd-95-7uu" id="IeV-1e-lCB"/>
+                                <segue destination="95P-2Y-HmQ" kind="show" id="adm-ZE-sPy"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>

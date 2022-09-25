@@ -24,15 +24,66 @@ class PackageViewController: UIViewController
     @IBOutlet weak var currentImage: UIImageView!
     @IBOutlet weak var packgeTableViewController: UITableView!
     
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         initialSetup()
         lastLocation = (passedPackage?.lastLocation)
+        
+        
+       
+    
        
         
     }
+    
+    
+    fileprivate func presentSheet() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let addBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "AddTrakingNumberViewController") as! AddTrakingNumberViewController
+        
+        addBarcodeViewController.modalPresentationStyle = .pageSheet
+       
+        if let sheet = addBarcodeViewController.sheetPresentationController {
+            
+            // 3
+            sheet.detents = [.medium(), .large()]
+            sheet.selectedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = true
+            sheet.largestUndimmedDetentIdentifier = .medium
+            
+            
+        }
+        // 4
+        present(addBarcodeViewController, animated: true, completion: nil)
+    }
+    
+//    private func presentEditShipmentSheet(packge: PackageObject) {
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let addBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "EditTrackingNumberViewController") as! EditTrackingNumberViewController
+//
+//        addBarcodeViewController.modalPresentationStyle = .pageSheet
+//        addBarcodeViewController.isModalInPresentation = true
+//        addBarcodeViewController.passedPackage = self.passedPackage!
+//
+//        if let sheet = addBarcodeViewController.sheetPresentationController
+//        {
+//
+//            // 3
+//            sheet.detents = [.large()]
+//            sheet.selectedDetentIdentifier = .large
+//            sheet.prefersScrollingExpandsWhenScrolledToEdge = true
+//            sheet.largestUndimmedDetentIdentifier = .medium
+//
+//
+//        }
+//        // 4
+//        present(addBarcodeViewController, animated: true, completion: nil)
+//    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,6 +100,9 @@ class PackageViewController: UIViewController
        
     }
     
+    
+    
+    
     @IBAction func editButtonPressed(_ sender: Any)
     {
 
@@ -60,10 +114,12 @@ class PackageViewController: UIViewController
         let logoutAction = UIAlertAction(title: "Edit Shipment", style: .default)
         { (action) in
             //Handle Edit Shipement Action
+            
+//            self.presentEditShipmentSheet(packge: self.passedPackage!)
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let editBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "EditTrackingNumberViewController") as! EditTrackingNumberViewController
             editBarcodeViewController.passedPackage = self.passedPackage!
-            
+           
             self.navigationController?.pushViewController(editBarcodeViewController, animated: true)
         }
         // add the logout action to the alert controller

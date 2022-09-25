@@ -168,10 +168,11 @@ extension EditTrackingNumberViewController: UITextFieldDelegate
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
-
+print("Hello im right here")
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                let newViewController = storyBoard.instantiateViewController(withIdentifier: "SelectCarrierViewController") as! SelectCarrierViewController
+        
                navigationController?.pushViewController(newViewController, animated: true)
                   return false
       

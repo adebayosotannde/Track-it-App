@@ -22,7 +22,6 @@
 		EE53BC2428DF4A24001B7F22 /* location.json in Resources */ = {isa = PBXBuildFile; fileRef = EE53BC2128DF4A24001B7F22 /* location.json */; };
 		EE53BC2528DF4A24001B7F22 /* scanner.json in Resources */ = {isa = PBXBuildFile; fileRef = EE53BC2228DF4A24001B7F22 /* scanner.json */; };
 		EE53BC2828DF4AD7001B7F22 /* ok.json in Resources */ = {isa = PBXBuildFile; fileRef = EE53BC2728DF4AD7001B7F22 /* ok.json */; };
-		EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */; };
 		EE56B53028B58F1800676F48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B52F28B58F1800676F48 /* CoreDataManager.swift */; };
 		EE56B53228B58F6100676F48 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53128B58F6100676F48 /* NetWorkManager.swift */; };
 		EE56B53528B5915200676F48 /* Add - CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53428B5915200676F48 /* Add - CoreData.swift */; };
@@ -77,7 +76,6 @@
 		EE53BC2128DF4A24001B7F22 /* location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location.json; sourceTree = "<group>"; };
 		EE53BC2228DF4A24001B7F22 /* scanner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scanner.json; sourceTree = "<group>"; };
 		EE53BC2728DF4AD7001B7F22 /* ok.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ok.json; sourceTree = "<group>"; };
-		EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home - Data and UI Functions .swift"; sourceTree = "<group>"; };
 		EE56B52F28B58F1800676F48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		EE56B53128B58F6100676F48 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		EE56B53428B5915200676F48 /* Add - CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add - CoreData.swift"; sourceTree = "<group>"; };
@@ -253,7 +251,6 @@
 			children = (
 				EEAF767D28B03B4E00CA9FA0 /* Main View.swift */,
 				EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */,
-				EE56B52D28B58E6600676F48 /* Home - Data and UI Functions .swift */,
 				EE35802D28D7FC5E00EF9244 /* SideMenuViewController.swift */,
 				EEA1AB0328DFA95800015952 /* Archived Packages.swift */,
 			);
@@ -570,7 +567,6 @@
 				EEC9FA8A28A5F706009D6848 /* Package Details.swift in Sources */,
 				EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */,
 				EE5829FD289EDE220073FDB7 /* HomeMenuViewController.swift in Sources */,
-				EE56B52E28B58E6600676F48 /* Home - Data and UI Functions .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,7 +730,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -767,7 +763,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

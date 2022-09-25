@@ -15,7 +15,7 @@ class MainViewController:UIViewController
     {
         super.viewDidLoad()
         //Step 1: Decide which View Controller to display next
-       launchNextViewController()
+       viewControllerToLaunch()
         
     }
     
@@ -25,12 +25,7 @@ class MainViewController:UIViewController
       
     }
     
-    func launchNextViewController()
-    {
-        viewControllerToLaunch()
-       
-}
-    
+ 
     
     func viewControllerToLaunch()
     
@@ -42,7 +37,12 @@ class MainViewController:UIViewController
                          
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeMenuViewController") as! HomeMenuViewController
-                        self.navigationController?.pushViewController(newViewController, animated: true)
+                        newViewController.modalPresentationStyle = .fullScreen
+                        navigationController?.pushViewController(newViewController, animated: true)
+             
+                       
+                    
+                        
                     }
             else
             {

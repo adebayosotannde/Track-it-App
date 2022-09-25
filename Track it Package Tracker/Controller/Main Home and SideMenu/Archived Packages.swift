@@ -18,7 +18,7 @@ class ArchivedPackagesViewController: UIViewController
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var packagesTableView: UITableView!
     
-    let delivered = CoreDataManager.sharedManager.getActivePackagesInOrder() //Delivered Packages
+    let delivered = CoreDataManager.sharedManager.getAllDeliveredPackagesInOrder() //Delivered Packages
    
 
     override func viewDidLoad()

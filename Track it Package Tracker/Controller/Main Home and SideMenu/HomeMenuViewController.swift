@@ -11,107 +11,140 @@ import Lottie
 
 extension HomeMenuViewController
 {
-    
+    //MARK: - LifeCycle Functions
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-
-        registerTableViewCells()
-        registerNotificationCenter()
-        updateUI()
-      
+        registerTableViewCells() //Register table view cells
+        registerNotificationCenter() //Register the notification center
+        updateUI() //Update the user interface
         
-        
-   
         let timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
-        
-        
-    
-        
-    
-        
-        
-        
-       
-       
+ 
     }
-    override func viewDidAppear(_ animated: Bool) {
+    
+  
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
         super.viewDidAppear(animated)
-        
-        //setup animation view
-        animationView.loopMode = .loop
-        animationView.play()
-        animationView.backgroundColor = .clear
-        
+        animateTheAnimationView()
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         //setup animation view
-        animationView.loopMode = .loop
-        animationView.play()
-        animationView.backgroundColor = .clear
-        
+        animateTheAnimationView()
     }
     
-   
-    @objc func fireTimer() {
+    //MARK: - Setup Functions
+    @objc func fireTimer()
+    {
         print("TODO:- Do something firetimer")
     }
     
+    
+    fileprivate func animateTheAnimationView()
+    {
+        //setup animation view
+        animationView.loopMode = .loop
+        animationView.play()
+        animationView.backgroundColor = .clear
+    }
+    
+    private func updateUI()
+    {
+        //Reveres the context
+        packages = CoreDataManager.sharedManager.getActivePackagesInOrder()//Retrive Package Objects Array
+        self.packagesTableView.reloadData()
+        hideTableViewIfThereAreNoPackages()
+    }
+    
+    //Hides the Table View If there are no Packages in the Container.
+    private func hideTableViewIfThereAreNoPackages()
+    {
+        if(packages.count == 0 )
+          {
+              packagesTableView.isHidden = true
+            
+          }
+            else
+            {
+
+                    self.packagesTableView.isHidden = false
+              
+            }
+    }
+    
+    //Registers the PackageViewCells
+    private func registerTableViewCells()
+    {
+        //RegisterTableViewCells
+        let textFieldCell = UINib(nibName: PackageTableViewCell.classIdentifier,bundle: nil)
+        self.packagesTableView.register(textFieldCell,forCellReuseIdentifier: PackageTableViewCell.cellIdentifier)
+
+    }
+
+    
+    private func deletePackageObject(deleteObject: PackageObject)
+    {
+       
+        CoreDataManager.sharedManager.delete(person: deleteObject) //Delete Package Object from Core Data
+    }
+    
+
+    private func refreshDataForAllPackages()
+    {
+        CoreDataManager.sharedManager.fetchDataForAllPackages()
+    }
+    
+    private func getColorFromString(nameAsString: String)-> UIColor
+    {
+        switch nameAsString.lowercased()
+        {
+        case "green":
+            return .systemGreen
+        case "yellow":
+            return .systemYellow
+        default:
+            return .systemRed
+        }
+    }
 }
 
 //MARK: - Main Class
 class HomeMenuViewController: UIViewController
 {
     
-    @IBOutlet weak var tabBarViwController: UITabBar!
+    var packages:[PackageObject] = [] //Package Object.
+    
+    
+    
     @IBOutlet weak var animationView: AnimationView!
-    var packages = [PackageObject]()//Pacakge Object Array
-   
-    
-    
-    
     @IBOutlet var containerView: UIView!
-    @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
-   
-    
     @IBOutlet weak var packagesTableView: UITableView!
     
-    
-    //Side Menu Outlets
-    
-
-   
-    
-    
-    
-    @IBAction func showHamburgerMenu(_ sender: UIBarButtonItem)
-    {
-       
-       
-    }
+ 
     
     @IBAction func cameraButtonPressed(_ sender: Any)
     {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let addBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "AddTrakingNumberViewController") as! AddTrakingNumberViewController
-        addBarcodeViewController.modalPresentationStyle = .currentContext
+        addBarcodeViewController.modalPresentationStyle = .formSheet
         addBarcodeViewController.launchBarcodeViewController = true
         navigationController?.pushViewController(addBarcodeViewController, animated: true)
     }
     
-    
-    
-    
-    @IBAction func purchaseApp(_ sender: Any)
+    @IBAction func menuButtonPressed(_ sender: Any)
     {
+        
+        
     }
-
+    
 }
 
-//MARK: - Table View Controller Functions
+//MARK: - Table View Datasource Controller Functions
 extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -130,12 +163,7 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
         cell.packageDescription.text = tempPackage.descriptionOfPackage
         cell.logoImage.image = UIImage(named: tempPackage.packageCarrierCode!)
         cell.packageCurrentDescription.text = tempPackage.currentDescription! //Good
-        
-        
         cell.circleIndicator.tintColor =  getColorFromString(nameAsString: tempPackage.circleIndicatorColor!)
-        
-        
-        
         cell.selectionStyle = .none
         return cell
         
@@ -192,13 +220,13 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 //MARK: - Notification Canter
 extension HomeMenuViewController
 {
-    func registerNotificationCenter()
+    private func registerNotificationCenter()
     {
     //Obsereves the Notification
     NotificationCenter.default.addObserver(self, selector: #selector(doWhenNotified(_:)), name: Notification.Name(StringLiteral.notificationKey), object: nil)
     }
     
-    func postBarcodeNotification(code: String)
+    private func postBarcodeNotification(code: String)
     {
         var info = [String: String]()
         info[code.description] = code.description //post the notification with the key.
