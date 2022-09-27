@@ -160,7 +160,7 @@ extension DataObjectManager
         
         if passedPAckage?.isValidTrackingNumber == false
         {
-            return "No Data. Check Back later or Contact Carrier"
+            return "Waiting for updates. Check back later."
         }
         else
         {
@@ -224,7 +224,7 @@ extension DataObjectManager
             return recentStatus
         }
         
-        return "no data"
+        return "waiting for tracking updates"
     }
     
     func getMostRecentLocation()->String

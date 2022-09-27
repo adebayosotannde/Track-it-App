@@ -7,11 +7,68 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class SideMenuViewController: UIViewController
 {
     @IBOutlet weak var currentVersion: UIButton!
     
+    @IBAction func deleteAccountButton(_ sender: Any)
+    {
+        
+        let alert = UIAlertController(title: "Confirm", message: "You will need to create a new account. All data will be lost forever!", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler:
+        { UIAlertAction in
+            
+                    if Auth.auth().currentUser != nil
+                    {
+                    Auth.auth().currentUser?.delete()
+            
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let addBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            
+                       self.navigationController?.modalPresentationStyle = .popover
+                       self.navigationController?.pushViewController(addBarcodeViewController, animated: true)
+                    } else
+                    {
+                       print("failed")
+            
+            
+                    }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:
+        { UIAlertAction in
+            
+        }))
+        
+        
+    
+        
+        self.present(alert, animated: true, completion: nil)//Displays the Alert Box
+        
+        
+        
+        
+        
+        
+//        if Auth.auth().currentUser != nil
+//        {
+//        Auth.auth().currentUser?.delete()
+//
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let addBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//
+//           self.navigationController?.modalPresentationStyle = .popover
+//           self.navigationController?.pushViewController(addBarcodeViewController, animated: true)
+//        } else
+//        {
+//           print("failed")
+//
+//
+//        }
+    }
     @IBOutlet weak var welcomeTExt: UILabel!
     @IBOutlet weak var accountStatusButton: UIButton!
     override func viewDidLoad()

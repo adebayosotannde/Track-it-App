@@ -31,6 +31,7 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fghkjdggnrgegqergtoiernglbrigubreg@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-rO-lRt">
                                         <rect key="frame" x="0.0" y="90" width="428" height="19.333333333333329"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -79,12 +80,30 @@
                                             <action selector="signoutButton:" destination="95P-2Y-HmQ" eventType="touchUpInside" id="wb9-65-jgH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3q-h5-Fmg">
+                                        <rect key="frame" x="10" y="726" width="408" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Delete Account"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deleteAccountButton:" destination="95P-2Y-HmQ" eventType="touchUpInside" id="aYQ-Ns-gcu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="cTK-fy-7sx" firstAttribute="top" secondItem="wnw-kU-Pe8" secondAttribute="top" constant="20" id="1Ho-Gf-18o"/>
+                                    <constraint firstAttribute="trailing" secondItem="k3q-h5-Fmg" secondAttribute="trailing" constant="10" id="5Hq-H7-5Za"/>
                                     <constraint firstItem="OV2-IR-yGB" firstAttribute="leading" secondItem="wnw-kU-Pe8" secondAttribute="leading" constant="30" id="B3U-w0-cua"/>
                                     <constraint firstAttribute="trailing" secondItem="vXY-XQ-Y7S" secondAttribute="trailing" id="BpR-Q5-uA6"/>
+                                    <constraint firstItem="n9B-dS-uqk" firstAttribute="top" secondItem="k3q-h5-Fmg" secondAttribute="bottom" constant="10" id="IQt-Rs-nXS"/>
+                                    <constraint firstItem="k3q-h5-Fmg" firstAttribute="leading" secondItem="wnw-kU-Pe8" secondAttribute="leading" constant="10" id="J3C-To-5ZX"/>
                                     <constraint firstItem="vXY-XQ-Y7S" firstAttribute="top" secondItem="YAP-rO-lRt" secondAttribute="bottom" constant="50" id="Lyq-Oa-Ilg"/>
                                     <constraint firstItem="YAP-rO-lRt" firstAttribute="top" secondItem="cTK-fy-7sx" secondAttribute="bottom" id="MnF-ye-ZBV"/>
                                     <constraint firstItem="n9B-dS-uqk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OV2-IR-yGB" secondAttribute="trailing" constant="8" symbolic="YES" id="QsZ-uR-6R7"/>
@@ -1771,7 +1790,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="forgotPasswordButtonPressed:" destination="gZd-IN-RMA" eventType="touchUpInside" id="fHr-nb-ahN"/>
-                                                    <segue destination="gI0-LG-vcc" kind="show" identifier="" id="4j5-hc-8ad"/>
+                                                    <segue destination="gI0-LG-vcc" kind="show" identifier="ResetPassword" id="4j5-hc-8ad"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1841,8 +1860,12 @@
             <point key="canvasLocation" x="9232.8244274809149" y="-190.14084507042256"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="BJz-Eu-LG0"/>
+        <designable name="ZhI-7A-ZrA"/>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="fLT-Hu-foY"/>
+        <segue reference="Wb7-tI-UHs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="archivebox.fill" catalog="system" width="128" height="107"/>
