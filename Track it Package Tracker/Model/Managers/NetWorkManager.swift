@@ -15,6 +15,7 @@ class NetWorkManager
 
     func requestData(packageDetail: PackageObject)
     {
+        print("Attempting to request data")
         GoShippoRequest(package: packageDetail) //Quiery the UPS API Against the tracking Number
     }
 }

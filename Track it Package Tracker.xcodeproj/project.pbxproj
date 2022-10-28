@@ -29,6 +29,8 @@
 		EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */; };
 		EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */; };
 		EE5829FD289EDE220073FDB7 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */; };
+		EE85D6A428F62BBB00BEE222 /* CustomView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE85D6A328F62BBB00BEE222 /* CustomView.storyboard */; };
+		EE85D6A628F62D0700BEE222 /* WhatsNewPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE85D6A528F62D0700BEE222 /* WhatsNewPopupViewController.swift */; };
 		EE8B2CAB28DE3022002220F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CAA28DE3022002220F3 /* GoogleService-Info.plist */; };
 		EE8B2CB028DE34BD002220F3 /* addshipment.json in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CAF28DE34BD002220F3 /* addshipment.json */; };
 		EE8B2CB228DE4B13002220F3 /* getStarted.json in Resources */ = {isa = PBXBuildFile; fileRef = EE8B2CB128DE4B13002220F3 /* getStarted.json */; };
@@ -83,6 +85,8 @@
 		EE56B53928B5CDE200676F48 /* GOSHIPPOJSONDATA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOSHIPPOJSONDATA.swift; sourceTree = "<group>"; };
 		EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptions.swift; sourceTree = "<group>"; };
 		EE5829FC289EDE220073FDB7 /* HomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewController.swift; sourceTree = "<group>"; };
+		EE85D6A328F62BBB00BEE222 /* CustomView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomView.storyboard; sourceTree = "<group>"; };
+		EE85D6A528F62D0700BEE222 /* WhatsNewPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewPopupViewController.swift; sourceTree = "<group>"; };
 		EE8B2CAA28DE3022002220F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE8B2CAF28DE34BD002220F3 /* addshipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addshipment.json; sourceTree = "<group>"; };
 		EE8B2CB128DE4B13002220F3 /* getStarted.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getStarted.json; sourceTree = "<group>"; };
@@ -354,6 +358,8 @@
 				EEFC57482899780300EF13F4 /* TableView Cells */,
 				EEFC57262898B37500EF13F4 /* Main.storyboard */,
 				EEFC572E2898B37600EF13F4 /* LaunchScreen.storyboard */,
+				EE85D6A328F62BBB00BEE222 /* CustomView.storyboard */,
+				EE85D6A528F62D0700BEE222 /* WhatsNewPopupViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 			files = (
 				EE8B2CB028DE34BD002220F3 /* addshipment.json in Resources */,
 				EEA1AB0228DFA88B00015952 /* empty.json in Resources */,
+				EE85D6A428F62BBB00BEE222 /* CustomView.storyboard in Resources */,
 				EE53BC2528DF4A24001B7F22 /* scanner.json in Resources */,
 				EEFC573A2899774800EF13F4 /* ActivityTableViewCell.xib in Resources */,
 				EE8B2CB228DE4B13002220F3 /* getStarted.json in Resources */,
@@ -565,6 +572,7 @@
 				EEAF767A28B01F6F00CA9FA0 /* Select Carrier.swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
 				EEC9FA8A28A5F706009D6848 /* Package Details.swift in Sources */,
+				EE85D6A628F62D0700BEE222 /* WhatsNewPopupViewController.swift in Sources */,
 				EE56B53A28B5CDE200676F48 /* GOSHIPPOJSONDATA.swift in Sources */,
 				EE5829FD289EDE220073FDB7 /* HomeMenuViewController.swift in Sources */,
 			);
@@ -714,11 +722,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Track it Package Tracker/Track it Package Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.1.2;
+				CURRENT_PROJECT_VERSION = 3.1.4;
 				DEVELOPMENT_TEAM = 4G4YKXJ9A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Track it Package Tracker/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Track it!";
+				INFOPLIST_KEY_CFBundleDisplayName = "Track it";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Track It! Allows the App to Scan for Barcodes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -730,7 +739,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1.2;
+				MARKETING_VERSION = 3.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -747,11 +756,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Track it Package Tracker/Track it Package Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.1.2;
+				CURRENT_PROJECT_VERSION = 3.1.4;
 				DEVELOPMENT_TEAM = 4G4YKXJ9A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Track it Package Tracker/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Track it!";
+				INFOPLIST_KEY_CFBundleDisplayName = "Track it";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Track It! Allows the App to Scan for Barcodes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -763,7 +773,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1.2;
+				MARKETING_VERSION = 3.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AdebayoSotannde.TrackIt.Track-It2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

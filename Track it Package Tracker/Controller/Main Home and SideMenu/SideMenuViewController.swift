@@ -13,6 +13,11 @@ class SideMenuViewController: UIViewController
 {
     @IBOutlet weak var currentVersion: UIButton!
     
+    
+    @IBAction func currentVersionPressed(_ sender: Any)
+    {
+        WhatsNewPopupViewController.showPopup(parentVC: self)
+    }
     @IBAction func deleteAccountButton(_ sender: Any)
     {
         

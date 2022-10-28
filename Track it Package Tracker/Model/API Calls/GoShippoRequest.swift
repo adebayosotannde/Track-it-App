@@ -6,14 +6,17 @@
 //
 
 import Foundation
+import UserNotifications
+
 
 
 class GoShippoRequest
 {
+    
     //APi Key's
     let token = "ShippoToken shippo_live_5f9402689b38118662de1e49be8828fa33c05fd6" //Go Shipp api key
     var passedPackage: PackageObject
-    
+    let userNotificationCenter = UNUserNotificationCenter.current()
    
   
     init(package: PackageObject)
@@ -21,8 +24,11 @@ class GoShippoRequest
       passedPackage = package//Set the package object
         retriveData()
        
+       
         
     }
+    
+    
     
     func retriveData()
     {
@@ -69,8 +75,15 @@ class GoShippoRequest
             
           
            
-print("Sucess")
+            print("Sucess")
             let data = DataObjectManager(package: self.passedPackage)
+         
+            
+           
+            
+           
+            
+            
             
             
             self.passedPackage.testData = dataString.data(using: .utf8)
@@ -80,7 +93,31 @@ print("Sucess")
             self.passedPackage.lastUpdated = data.getWhenThePackageWasLastUpdated()
             self.passedPackage.lastLocation = data.getMostRecentLocation()
             self.passedPackage.delivered = data.getIfPackageHasbeenDelivered()
+            
+            
+            postBarcodeNotification(code: StringLiteral.displayUserNotification)
+            if passedPackage.numberOfActivities < data.getNumberOfActivities()
+            {
+               
+                
+                let descriptionOfPackage = passedPackage.descriptionOfPackage
+                let body = passedPackage.currentDescription
+                
+                
+            }else
+            {
+                print("User will not be notified")
+            }
+            
+            
+            passedPackage.numberOfActivities = 0
+            //Int64(data.getNumberOfActivities())
+            
+            
+            
+            
             CoreDataManager.sharedManager.save() //Saves Data and Refreshes View
+            
             
       
         }
@@ -91,4 +128,22 @@ print("Sucess")
         
     }
     
+}
+
+//MARK: - User notifications
+extension GoShippoRequest
+{
+   
+
+    
+  
+    
+    private func postBarcodeNotification(code: String)
+    {
+        var info = [String: String]()
+        info[StringLiteral.displayUserNotification] = code.description
+        NotificationCenter.default.post(name: Notification.Name(rawValue: StringLiteral.notificationKey), object: nil, userInfo: info)
+    }
+    
+   
 }

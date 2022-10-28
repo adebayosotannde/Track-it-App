@@ -67,6 +67,9 @@
                                         <state key="normal" title="Version1.02">
                                             <color key="titleColor" systemColor="linkColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="currentVersionPressed:" destination="95P-2Y-HmQ" eventType="touchUpInside" id="fGd-n6-Gd7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-IR-yGB">
                                         <rect key="frame" x="30" y="766" width="106" height="35"/>
@@ -1863,6 +1866,7 @@
     <designables>
         <designable name="BJz-Eu-LG0"/>
         <designable name="ZhI-7A-ZrA"/>
+        <designable name="lEG-Ei-cDQ"/>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Wb7-tI-UHs"/>

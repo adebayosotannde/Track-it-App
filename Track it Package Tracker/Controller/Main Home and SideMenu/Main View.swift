@@ -34,6 +34,8 @@ class MainViewController:UIViewController
                     if Auth.auth().currentUser != nil
                     {
                         
+                      
+                        
                          
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeMenuViewController") as! HomeMenuViewController
@@ -47,7 +49,7 @@ class MainViewController:UIViewController
             else
             {
                 
-                
+                print("Hello2")
                 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController

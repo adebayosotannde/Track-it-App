@@ -26,14 +26,20 @@ extension DataObjectManager
     /**
      Returns the number of activites for a particular PackageObject
      */
-    private func getNumberOfActivities() -> Int
+     func getNumberOfActivities() -> Int
     {
         if let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
         {
-            let numberOfActivities = (trackingData.trackingHistory!.count) - 1
+            let numberOfActivities = (trackingData.trackingHistory!.count)
+            //- 1
             return numberOfActivities
         }
         return 0
+    }
+    
+    private func getPosition() -> Int
+    {
+        getNumberOfActivities()-1
     }
     
     /**
@@ -47,7 +53,7 @@ extension DataObjectManager
             let numberOfActivities = getNumberOfActivities()
             let currentRow = numberOfActivities - passedIndex //This is of how the order of the tracking data is recived from the APi.
             //Users needs to see the latest activity. APi returns Tracking Array like this [ Activity 1, Activity 2, Activity 3]
-            let trackingObject = trackingData.trackingHistory![currentRow]
+            let trackingObject = trackingData.trackingHistory![currentRow-1]
             return trackingObject
         }
         return nil
@@ -188,14 +194,14 @@ extension DataObjectManager
         let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
         
         
-        let numberOfActivities = (trackingData?.trackingHistory!.count)! - 1
+        let numberOfActivities = getNumberOfActivities()
         
         if numberOfActivities > 0
         {
-            print(numberOfActivities)
             
             
-            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities].status?.lowercased()
+            
+            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities-1].status?.lowercased()
             
             if (hasbeenDeliverd == "delivered")
             {
@@ -214,13 +220,14 @@ extension DataObjectManager
     {
         let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
         
-        let numberOfActivities = (trackingData?.trackingHistory!.count)! - 1
+        let numberOfActivities = getNumberOfActivities()
+        
         
         var recentStatus = ""
         
         if numberOfActivities > 0
         {
-            recentStatus = (trackingData?.trackingHistory![numberOfActivities].status)!
+            recentStatus = (trackingData?.trackingHistory![numberOfActivities-1].status)!
             return recentStatus
         }
         
@@ -229,44 +236,114 @@ extension DataObjectManager
     
     func getMostRecentLocation()->String
     {
-        
-        let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
-        
-        let numberOfActivities = (trackingData?.trackingHistory!.count)! - 1
-        
-        var location  = ""
-        if numberOfActivities > 0
+        if let location = getBestLocationForMap()
         {
-            //Get City
-            let city = (trackingData?.trackingHistory![numberOfActivities].location?.city!)
-            if city != ""
-            {
-                location = location + city! + ", "
-            }
-            
-            //Get State
-            let state = (trackingData?.trackingHistory![numberOfActivities].location?.state!)
-            if state != ""
-            {
-                location = location + state! + ", "
-            }
-            
-            
-            //Get Country
-            let country = (trackingData?.trackingHistory![numberOfActivities].location?.country)
-            if country != ""
-            {
-                location = location + country!
-            }
-            
             return location
-            
         }
         
+        return "NY,NY"
+    
+       
         
+       
         
-        return "US"
+    }
+    
+    func getBestLocationForMap()-> String?
+    {
+        var locationArray:[String] = []
         
+        //For loop to loop through the tracking histor
+        let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
+        
+        let numberOfActivities = getNumberOfActivities()
+       
+        if numberOfActivities > 0
+        {
+            for variable in 0...numberOfActivities-1
+            {
+                //Check if location string is valid ie does not return ""
+                let currentLocation = getLocationStringFromLocationObject(location: trackingData?.trackingHistory![variable].location)
+                if currentLocation == ""
+                {
+                    //Do nothing error
+                }else
+                {
+                    locationArray.append(currentLocation)
+                    print(currentLocation)
+                }
+                
+                
+                
+            }
+           
+        }
+        
+       return determineLocationToReturn(locations: locationArray)
+        
+    }
+    
+    func determineLocationToReturn(locations: [String])->String
+    {
+        //Note Locations can be "" this can include all locations
+        if locations.count == 0
+        {
+            return "NY,NY"
+        }
+        
+        if locations.count > 0
+        {
+            let latestLocation = (locations[locations.count-1])
+            
+            
+            return latestLocation
+           
+        }
+        
+        return "NY, NY"
+    }
+    
+    
+    func getLocationStringFromLocationObject(location: Location?)->String
+    {
+        if let location = location
+        {
+            var stringValue = ""
+            if let city = location.city
+            {
+                if city != ""
+                {
+                    stringValue = stringValue + city + ", "
+                }
+            }
+           
+            
+            //Get State
+            if let state = location.state
+        {
+                if state != ""
+                {
+                    stringValue = stringValue + state + ", "
+                }
+            }
+
+
+
+            //Get Country
+            if let country = location.country
+        {
+                if country != ""
+                {
+                    stringValue = stringValue + country
+                }
+            }
+           
+            return stringValue
+        }else
+        {
+            return ""
+        }
+       
     }
     
     func getIfPackageHasbeenDelivered()->Bool
@@ -279,11 +356,11 @@ extension DataObjectManager
         
         let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
         
-        let numberOfActivities = (trackingData?.trackingHistory!.count)! - 1
+        let numberOfActivities = getNumberOfActivities()
         
         if numberOfActivities > 0
         {
-            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities].status?.lowercased()
+            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities-1].status?.lowercased()
             
             if (hasbeenDeliverd == "delivered")
             {
@@ -309,11 +386,11 @@ extension DataObjectManager
         
         let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
         
-        let numberOfActivities = (trackingData?.trackingHistory!.count)! - 1
+        let numberOfActivities = getNumberOfActivities()
         
         if numberOfActivities > 0
         {
-            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities].status?.lowercased()
+            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities-1].status?.lowercased()
             
             if (hasbeenDeliverd == "delivered")
             {
@@ -345,11 +422,11 @@ extension DataObjectManager
         
         let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
         
-        let numberOfActivities = (trackingData?.trackingHistory!.count)! - 1
+        let numberOfActivities = getNumberOfActivities()
         
         if numberOfActivities > 0
         {
-            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities].status?.lowercased()
+            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities-1].status?.lowercased()
             
             if (hasbeenDeliverd == "delivered")
             {
@@ -383,11 +460,11 @@ extension DataObjectManager
         
         let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPAckage?.testData)!)
         
-        let numberOfActivities = (trackingData?.trackingHistory!.count)! - 1
+        let numberOfActivities = getNumberOfActivities()
         
         if numberOfActivities > 0
         {
-            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities].status?.lowercased()
+            let hasbeenDeliverd = trackingData?.trackingHistory![numberOfActivities-1].status?.lowercased()
             
             if (hasbeenDeliverd == "delivered")
             {
@@ -610,7 +687,7 @@ extension DataObjectManager
     private func getProperDate(date: String)-> String
     {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "YYYY-MM-DD'T'HH:mm:ssZ"
+        dateFormatterGet.dateFormat = "YYYY-MM-dd'T'HH:mm:ss'Z'"
 
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "EEEE, MMM d, yyyy"

@@ -61,29 +61,7 @@ class PackageViewController: UIViewController
         present(addBarcodeViewController, animated: true, completion: nil)
     }
     
-//    private func presentEditShipmentSheet(packge: PackageObject) {
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let addBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "EditTrackingNumberViewController") as! EditTrackingNumberViewController
-//
-//        addBarcodeViewController.modalPresentationStyle = .pageSheet
-//        addBarcodeViewController.isModalInPresentation = true
-//        addBarcodeViewController.passedPackage = self.passedPackage!
-//
-//        if let sheet = addBarcodeViewController.sheetPresentationController
-//        {
-//
-//            // 3
-//            sheet.detents = [.large()]
-//            sheet.selectedDetentIdentifier = .large
-//            sheet.prefersScrollingExpandsWhenScrolledToEdge = true
-//            sheet.largestUndimmedDetentIdentifier = .medium
-//
-//
-//        }
-//        // 4
-//        present(addBarcodeViewController, animated: true, completion: nil)
-//    }
-    
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -260,10 +238,12 @@ extension PackageViewController
                 }
                 
                let center = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
-                let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+                let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.10, longitudeDelta: 0.10))
+         
                 self.mapView.setRegion(region, animated: true)
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
+                                        
                 self.mapView.addAnnotation(annotation)
             }
     }
@@ -408,7 +388,7 @@ extension PackageViewController: UITableViewDataSource
         
         let trackingData = try? JSONDecoder().decode(Package.self, from: (passedPackage?.testData)!)
        
-        let count = (trackingData?.trackingHistory!.count)! - 1
+        let count = (trackingData?.trackingHistory!.count)! 
         
         
       

@@ -8,5 +8,6 @@ target 'Track it Package Tracker' do
   # Pods for Track it Package Tracker
 
 pod 'lottie-ios'
+pod 'TextFieldEffects', '~> 1.6'
 
 end

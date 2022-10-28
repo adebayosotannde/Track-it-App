@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
        
         requestNotficationPermission() //Request notification permission
         registerFirebaseDatabase() //Sets up Firebase Notifications
+        setupSirenUpdates()
         
         return true
     }
@@ -106,12 +107,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     //MARK: - Ap Refresh Function
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
-
-      
-
-      
         CoreDataManager.sharedManager.fetchDataForAllPackages()
-        sendNotification()
+        
+        //sendNotification()
         completionHandler(UIBackgroundFetchResult.newData)
     }
     
@@ -219,8 +217,8 @@ extension AppDelegate
         //MARK: - Siren
         Siren.shared.wail() //Siren import statement.
         //Update Message Presented to User.
-        Siren.shared.presentationManager = PresentationManager(alertTintColor: .systemBlue, appName: "UPS Tracker", alertTitle: "A New Version is Available", alertMessage: "A new version of the app is available. Please update as soon as possible. Thank you", updateButtonTitle: "Update", nextTimeButtonTitle: "Not Now", skipButtonTitle: "Skip this Version", forceLanguageLocalization: .none)
+        Siren.shared.presentationManager = PresentationManager(alertTintColor: .systemBlue, appName: "Track it", alertTitle: "A New Version is Available", alertMessage: "A new version of the app is available. Please update as soon as possible. Thank you", updateButtonTitle: "Update", nextTimeButtonTitle: "Not Now", skipButtonTitle: "Skip this Version", forceLanguageLocalization: .none)
        
-        Siren.shared.rulesManager = RulesManager(globalRules: .annoying, showAlertAfterCurrentVersionHasBeenReleasedForDays: 1) //Waits 1 days after update release to upgrade user.
+        Siren.shared.rulesManager = RulesManager(globalRules: .annoying, showAlertAfterCurrentVersionHasBeenReleasedForDays: 0) //Waits 0 days after update release to upgrade user.
     }
 }

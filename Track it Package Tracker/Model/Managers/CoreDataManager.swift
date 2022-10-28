@@ -159,6 +159,31 @@ class CoreDataManager
                   }
                }
     }
+    
+    func fetchDataForAllPackages2()
+    {
+        print("Fetching Data for All Packages")
+        DispatchQueue.global(qos: .background).sync
+        { print("inside queq1")
+            for package in self.packages
+            {
+                 if package.delivered == false
+                {
+                     
+                    
+                         print("inside the dispatch qu")
+                         NetWorkManager.sharedManager.requestData(packageDetail: package)
+                     
+                    
+                }
+           }
+        }
+        }
+        
+        
+        
+        
+    
 
     func updateTrackingNumber(updateThis: PackageObject)
     {

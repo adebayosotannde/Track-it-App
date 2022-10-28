@@ -14,6 +14,7 @@ struct StringLiteral
     //Notification Keys
     static let notificationKey = "com.tosin.notificationKey"
     static let updateHomeViewData = "updateHomeViewData"
+    static let displayUserNotification = "displayUserNotification"
     static let barcodeScannedNotification = "barcodeScannedNotification"
     static let hideHomeViewNavigationBar = "hideHomeViewNavigationBar"
     static let updatePackageViewController = "updatePackageViewController"
@@ -52,4 +53,8 @@ struct StringLiteral
     static let emailSupportAddress = "trackit.packagetracker@gmail.com"
     static let emailMessage = "<p>Thank you for your support&nbsp;</p><p>Please provide the following details so we can work promptly in adding the carrier</p><p><strong>Carrier Name:</strong></p><p><strong>Sample Tracking Number: </strong></p><p><strong>Carrier Website:</strong></p><p><br></p><p>Thanks you once again. As always all information provided are kept confidential.</p><p><br></p><p>Best Regards,&nbsp;</p><p>Track it! Team.</p>"
     static let emailSubject = "Add Carrier Request"
+    
+    
+    static let whatNew =
+"- Date Formatter Changed"
 }

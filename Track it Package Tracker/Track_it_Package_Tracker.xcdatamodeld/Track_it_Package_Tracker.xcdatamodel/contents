@@ -9,6 +9,7 @@
         <attribute name="isValidTrackingNumber" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="lastLocation" optional="YES" attributeType="String"/>
         <attribute name="lastUpdated" optional="YES" attributeType="String"/>
+        <attribute name="numberOfActivities" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="packageCarrierCode" optional="YES" attributeType="String"/>
         <attribute name="testData" optional="YES" attributeType="Binary"/>
         <attribute name="trackingNumber" optional="YES" attributeType="String" defaultValueString="Invalid Tracking Number"/>

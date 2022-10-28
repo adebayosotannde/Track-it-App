@@ -118,7 +118,7 @@ class HomeMenuViewController: UIViewController
 {
     
     var packages:[PackageObject] = [] //Package Object.
-    
+    let userNotificationCenter = UNUserNotificationCenter.current()
     
     
     @IBOutlet weak var animationView: AnimationView!
@@ -235,16 +235,21 @@ extension HomeMenuViewController
     
     @objc func doWhenNotified(_ notiofication: NSNotification)
     {
+        
+        
         if let dict = notiofication.userInfo as NSDictionary?
         {
             if (dict[StringLiteral.updateHomeViewData] as? String) != nil
             {
                 updateUI()
             }
-    
+            
+           
         
     
         }
     }
+   
+    
     
 }
